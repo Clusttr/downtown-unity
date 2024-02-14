@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class UIDragItem : MonoBehaviour, IDragHandler, IEndDragHandler
+public class UIDragItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
     
     [SerializeField] private HouseVariations hVariation = HouseVariations.VarOne;
@@ -41,7 +41,32 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IEndDragHandler
             if(Physics.Raycast(ray, out RaycastHit raycastHit) )
             {
                 variationDummyObj.transform.position = raycastHit.point;
+                if (!GameManager.Instance.CanDropBuildingHere())
+                {
+                    Debug.Log("Can't drop here");
+                    UpdateDummyColor(DummyUnitColor.Red);
+
+
+                }
+                else
+                {
+                    UpdateDummyColor(DummyUnitColor.Green);
+                }
+                
             }
+        }
+
+        if(isDragging && Input.GetMouseButtonDown(1))
+        {
+            Destroy(variationDummyObj);
+            isDragging = false;
+            isInstantiated = false;
+        }
+
+        if(isDragging && Input.GetKeyDown(KeyCode.Space))
+        {
+            variationDummyObj.transform.Rotate(new Vector3(0, 90, 0));
+            houseVariationPrefab.transform.Rotate(new Vector3(0, 90, 0));
         }
     }
     public void OnDrag(PointerEventData eventData)
@@ -53,10 +78,42 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        isDragging = false;
-        isInstantiated = false;
-        GameManager.Instance.testSpawn(hVariation);
+        if (GameManager.Instance.CanDropBuildingHere())
+        {
+            GameManager.Instance.SetUpUnit(hVariation);
+        }
+
         Destroy(variationDummyObj);
-        SetUpPrefab();
+        isDragging = false;
+        isInstantiated = false;    
+    }
+
+    public void UpdateDummyColor(DummyUnitColor color)
+    {
+        MeshRenderer[] mesh = variationDummyObj.GetComponents<MeshRenderer>();
+        //int numberOfMaterials = mesh.materials.Length;
+        //Debug.Log(numberOfMaterials);
+
+        foreach(MeshRenderer meshRenderer in mesh)
+        {
+            Material[] mats = meshRenderer.sharedMaterials;
+            for (int i = 0; i < mats.Length; i++)
+            {
+                mats[i] = GameManager.Instance.UpdateDummyUnitMaterial(color);
+            }
+            meshRenderer.sharedMaterials = mats;
+        }
+
+        //for (int i = 0; i < numberOfMaterials; i++)
+        //{
+        //    mesh.materials[i] = GameManager.Instance.UpdateDummyUnitMaterial(color);
+
+        //    Debug.Log("Tada GOt Here");
+        //}
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        
     }
 }

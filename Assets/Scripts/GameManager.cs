@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum DummyUnitColor
+{
+    None = 0,
+    Red = 1,
+    Green = 2,
+}
 public class GameManager : MonoBehaviour
 {
     [Header("Art Stuff")]
@@ -14,6 +21,8 @@ public class GameManager : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] private GameObject[] prefabs;
 
+    [SerializeField] private Material redMaterial;
+    [SerializeField] private Material greenMaterial;
 
     private const int TILE_COUNT_X = 20;
     private const int TILE_COUNT_Y = 20;
@@ -37,8 +46,6 @@ public class GameManager : MonoBehaviour
 
         buildings = new Buildings[TILE_COUNT_X, TILE_COUNT_Y];
 
-        //SpawnTheUnit(HouseVariations.VarOne);
-        //PositionTheUnit();
     }
 
     private void Update()
@@ -68,6 +75,8 @@ public class GameManager : MonoBehaviour
                 tiles[hitPosition.x, hitPosition.y].layer = LayerMask.NameToLayer("Hover");
             }
 
+            CanDropBuildingHere();
+
             if (Input.GetMouseButtonDown(0))
             {
                 if(buildings == null)
@@ -77,7 +86,6 @@ public class GameManager : MonoBehaviour
 
                 if (buildings[hitPosition.x, hitPosition.y] != null)
                 {
-                    Debug.Log("Setting currently dragged");
                     currentlyDragging = buildings[hitPosition.x, hitPosition.y];
 
                 }
@@ -121,6 +129,8 @@ public class GameManager : MonoBehaviour
                 currentHover = -Vector2Int.one;
             }
         }
+
+        
     }
 
     private bool MoveTo(Buildings hut, int x, int y)
@@ -132,8 +142,19 @@ public class GameManager : MonoBehaviour
             Debug.Log("Can't move here");
             return false;
         }
-
+            
         return true;
+    }
+
+    public bool CanDropBuildingHere()
+    {
+        if(buildings[currentHover.x, currentHover.y] == null)
+        {
+            return true;
+        }
+
+        return false;
+        
     }
 
     private void GenerateAllTiles(float tileSize, int tileCountX, int tileCountY)
@@ -202,11 +223,6 @@ public class GameManager : MonoBehaviour
     {
         buildings[currentHover.x, currentHover.y] = SpawnSingleUnit(hv);
 
-        //buildings[0, 0] = SpawnSingleUnit(HouseVariations.VarThree);
-        //buildings[1, 0] = SpawnSingleUnit(HouseVariations.VarThree);
-        //buildings[2, 0] = SpawnSingleUnit(HouseVariations.VarTwo);
-        //buildings[5, 1] = SpawnSingleUnit(HouseVariations.VarOne);
-
     }
 
     private void PositionSingleUnit( int x, int y, bool force = false)
@@ -229,20 +245,6 @@ public class GameManager : MonoBehaviour
         return new Vector3(x * tileSize, yOffset, y * tileSize) - bounds + new Vector3(tileSize / 2, 0, tileSize / 2);
     }
 
-    //public void OnSpawnVarOne()
-    //{
-    //    SpawnTheUnit();
-    //    PositionTheUnit();
-    //}
-
-    public void OnSpawnVarTwo()
-    {
-        SpawnSingleUnit(HouseVariations.VarTwo);
-    }
-    public void OnSpawnVarThree()
-    {
-        SpawnSingleUnit(HouseVariations.VarThree);
-    }
 
     public GameObject GetHousePrefabViaVariation(HouseVariations variation)
     {
@@ -255,10 +257,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void testSpawn(HouseVariations hv)
+    public void SetUpUnit(HouseVariations hv)
     {
         SpawnTheUnit(hv);
         PositionSingleUnit(currentHover.x, currentHover.y, true);
-        //PositionTheUnit();
+    }
+
+    public Material UpdateDummyUnitMaterial(DummyUnitColor color)
+    {
+        switch (color)
+        {
+            case DummyUnitColor.None:
+                return greenMaterial;
+            case DummyUnitColor.Red:
+                return redMaterial;
+            case DummyUnitColor.Green:
+                return greenMaterial;
+            default:
+                return greenMaterial;
+        }
+
     }
 }

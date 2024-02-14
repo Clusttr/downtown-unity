@@ -1092,9 +1092,11 @@ MonoBehaviour:
   yOffset: 0.1
   boardCenter: {x: 0, y: 0, z: 0}
   prefabs:
-  - {fileID: 7104909271544345574, guid: c5b1b505db6201240bfa1851e529db39, type: 3}
-  - {fileID: 6761290462872902380, guid: 2213c84d74c4c9d4fab43b435f6a3006, type: 3}
-  - {fileID: 125649636232142119, guid: 8cd8674dc255d9d448a8d04545b31c5f, type: 3}
+  - {fileID: 4981356589326105531, guid: c5b1b505db6201240bfa1851e529db39, type: 3}
+  - {fileID: 5712484324339965308, guid: 2213c84d74c4c9d4fab43b435f6a3006, type: 3}
+  - {fileID: 4986725576178371823, guid: 8cd8674dc255d9d448a8d04545b31c5f, type: 3}
+  redMaterial: {fileID: 2100000, guid: 999e55b73dbc5e3458859251769c0893, type: 2}
+  greenMaterial: {fileID: 2100000, guid: d0b1c6a928ea7774b828fde28716c8cb, type: 2}
 --- !u!1 &1025194779
 GameObject:
   m_ObjectHideFlags: 0
