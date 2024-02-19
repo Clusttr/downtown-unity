@@ -45,8 +45,6 @@ public class UIDragItem : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDr
                 {
                     Debug.Log("Can't drop here");
                     UpdateDummyColor(DummyUnitColor.Red);
-
-
                 }
                 else
                 {

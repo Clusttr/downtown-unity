@@ -1,6 +1,5 @@
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -10,7 +9,7 @@ public enum DummyUnitColor
     Red = 1,
     Green = 2,
 }
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     [Header("Art Stuff")]
     [SerializeField] private Material tileMaterial;
@@ -33,19 +32,11 @@ public class GameManager : MonoBehaviour
     private Vector2Int currentHover;
     private Vector3 bounds;
 
-    public static GameManager Instance;
-
-    private void Awake()
+    private void Start()
     {
-        if(Instance == null)
-        {
-            Instance = this;
-        }
-
         GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y);
 
         buildings = new Buildings[TILE_COUNT_X, TILE_COUNT_Y];
-
     }
 
     private void Update()
@@ -212,11 +203,55 @@ public class GameManager : MonoBehaviour
     //Spawn Buildings
     private Buildings SpawnSingleUnit(HouseVariations type)
     {
-        Buildings hut = Instantiate(prefabs[(int)type - 1], transform).GetComponent<Buildings>();
+
+        GameObject building = new GameObject();
+
+        GameObject instantiatedBuilding = Instantiate(building, transform);
+        Buildings hut = AddComponentToGameObject<Buildings>(type, instantiatedBuilding);
+
 
         hut.type = type;
-        
+        hut.SetUpData();
+
         return hut;
+    }
+
+    private T AddComponentToGameObject<T> (HouseVariations type, GameObject obj) where T : Component
+    {
+        Type componentType = null;
+
+        switch (type)
+        {
+            case HouseVariations.VarOne:
+                componentType = typeof(VariationOne);
+                break;
+            case HouseVariations.VarTwo:
+                componentType = typeof(VariationTwo);
+                break;
+            case HouseVariations.VarThree:
+                componentType = typeof(VariationThree);
+                break;
+            default:
+                break;
+                // Add more cases for other variations as needed
+        }
+
+        if (componentType != null)
+        {
+            T component = obj.AddComponent(componentType) as T;
+
+            if (component == null)
+            {
+                Debug.LogError("Failed to add component of type " + typeof(T) + " to the GameObject.");
+            }
+
+            return component ;
+        }
+        else
+        {
+            Debug.LogError("Unknown HouseVariations type: " + type);
+            return null;
+        }
     }
 
     private void SpawnTheUnit(HouseVariations hv)

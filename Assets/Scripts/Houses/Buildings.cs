@@ -14,35 +14,112 @@ public enum HouseVariations
 public enum ConstructionPhases
 {
     None = 0,
-    Constructing = 1,
-    FullyBuilt = 2,
+    Phase1 = 1,
+    Phase2 = 2,
+    Phase3 = 3,
 }
 
-public class Buildings : MonoBehaviour
+public abstract class Buildings : MonoBehaviour
 {
     public int currentX;
     public int currentY;
     public HouseVariations type;
+    public BuildingSO buildingSO;
     public ConstructionPhases constructionPhases;
+    public int phaseIndex;
 
-    private Vector3 desiredPosition;
-    private Vector3 desiredScale;
-    private Vector3 desiredRotation;
-
-    private void Update()
-    {
-        transform.Rotate(new Vector3 (0, 90, 0));
-    }
-
-    public virtual void SetRotation(Vector3 rotation, bool force = false)
-    {
-        desiredRotation = rotation;
-
-        if (force)
-            transform.rotation = Quaternion.Euler (desiredRotation);
-    }
-    public virtual void ConstructionPhase()
+    private void Start()
     {
 
     }
+
+    public virtual void SetUpData()
+    {
+        Debug.Log("HELLO");
+        buildingSO = ResourceManager.Instance.GetBuildingData(type);
+        phaseIndex = 1;
+        constructionPhases = ConstructionPhases.Phase1;
+        SetUpConstructionState(constructionPhases);
+    }
+
+    public void SetUpConstructionState(ConstructionPhases constructionPhases)
+    {
+        switch (constructionPhases)
+        {
+            case ConstructionPhases.None:
+                break;
+            case ConstructionPhases.Phase1:
+                StartCoroutine(OnBeginPhase1Construction());
+                break;
+            case ConstructionPhases.Phase2:
+                StartCoroutine(OnBeginPhase2Construction());
+                break;
+            case ConstructionPhases.Phase3:
+                OnFinishConstruction();
+                break;
+        }
+    }
+
+    public IEnumerator OnBeginPhase1Construction()
+    {
+        float totalTime = buildingSO.constructionTimer / 2;
+        float timeElasped = 0f;
+
+        GameObject constructionP1 = Instantiate(buildingSO.constructionPhases[0], transform);
+
+        while (totalTime > timeElasped)
+        {
+            timeElasped += 1f;
+            Debug.Log("Constructing " + timeElasped);
+
+            yield return new WaitForSeconds(1);
+        }
+
+        Debug.Log("Finished Counting");
+
+        phaseIndex++;
+
+        constructionPhases = ConstructionPhases.Phase2;
+
+        Destroy(constructionP1);
+
+        SetUpConstructionState(constructionPhases);
+
+        yield return null;
+    }
+
+    public IEnumerator OnBeginPhase2Construction()
+    {
+        float totalTime = buildingSO.constructionTimer / 2;
+        float timeElasped = 0f;
+
+        GameObject constructionP2 = Instantiate(buildingSO.constructionPhases[1], transform);
+
+        while (totalTime > timeElasped)
+        {
+            timeElasped += 1f;
+            Debug.Log("Constructing " + timeElasped);
+
+            yield return new WaitForSeconds(1);
+        }
+
+        Debug.Log("Finished Counting");
+
+        phaseIndex++;
+
+        constructionPhases = ConstructionPhases.Phase3;
+
+        Destroy(constructionP2);
+
+        SetUpConstructionState(constructionPhases);
+
+        yield return null;
+    }
+
+    public void OnFinishConstruction()
+    {
+        Instantiate(buildingSO.constructionPhases[2], transform);
+    }
+
+
 }

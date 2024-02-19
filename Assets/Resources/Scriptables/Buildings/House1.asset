@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf5b59cda65ac544b6116b0484339b4, type: 3}
+  m_Name: House1
+  m_EditorClassIdentifier: 
+  houseVariation: 1
+  constructionTimer: 10
+  constructionPhases:
+  - {fileID: 1346866172864440873, guid: a4971e4903d11034caddae9599051ee3, type: 3}
+  - {fileID: 7591257834775341099, guid: 1f9ccccd8d48a744f828251f52884ab7, type: 3}
+  - {fileID: 4981356589326105531, guid: c5b1b505db6201240bfa1851e529db39, type: 3}
+  constructionPhase1: {fileID: 7591257834775341099, guid: 1f9ccccd8d48a744f828251f52884ab7, type: 3}
+  FullyBuiltPhaseObject: {fileID: 4981356589326105531, guid: c5b1b505db6201240bfa1851e529db39, type: 3}

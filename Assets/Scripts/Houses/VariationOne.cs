@@ -1,18 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VariationOne : Buildings
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public override void SetUpData()
     {
-        
+        base.SetUpData();
+
+        Debug.Log("Hello from Child class");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
