@@ -9,6 +9,19 @@ public enum HouseVariations
     VarOne = 1,
     VarTwo = 2,
     VarThree = 3,
+    GreenSoil = 4,
+    RedSoil = 5,
+    BrownSoil = 6,
+    Road1 = 7,
+    Road2 = 8,
+    Road3 = 9,
+    Road4 = 10,
+}
+
+public enum EnviromentType
+{
+    Building,
+    Floor
 }
 
 public enum ConstructionPhases
@@ -118,7 +131,12 @@ public abstract class Buildings : MonoBehaviour
 
     public void OnFinishConstruction()
     {
-        Instantiate(buildingSO.constructionPhases[2], transform);
+        GameObject obj =  Instantiate(buildingSO.constructionPhases[2], transform);
+
+        if (buildingSO.enviromentType == EnviromentType.Floor)
+        {
+            obj.transform.localPosition = new Vector3(0, -0.001f, 0);
+        }
     }
 
 

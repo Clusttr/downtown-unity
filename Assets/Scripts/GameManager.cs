@@ -37,6 +37,11 @@ public class GameManager : Singleton<GameManager>
         GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y);
 
         buildings = new Buildings[TILE_COUNT_X, TILE_COUNT_Y];
+
+        SpawnEnvironment();
+        PositionTheUnit();
+
+
     }
 
     private void Update()
@@ -139,7 +144,7 @@ public class GameManager : Singleton<GameManager>
 
     public bool CanDropBuildingHere()
     {
-        if(buildings[currentHover.x, currentHover.y] == null)
+        if(buildings[currentHover.x, currentHover.y].GetComponent<GreenSoil>())
         {
             return true;
         }
@@ -201,20 +206,116 @@ public class GameManager : Singleton<GameManager>
 
 
     //Spawn Buildings
-    private Buildings SpawnSingleUnit(HouseVariations type)
+    private Buildings SpawnSingleUnit(HouseVariations type, Quaternion newRotation)
     {
 
         GameObject building = new GameObject();
 
         GameObject instantiatedBuilding = Instantiate(building, transform);
         Buildings hut = AddComponentToGameObject<Buildings>(type, instantiatedBuilding);
+        hut.transform.rotation = newRotation;
 
 
         hut.type = type;
         hut.SetUpData();
 
         return hut;
+
+
     }
+
+    private void SpawnEnvironment()
+    {
+        buildings = new Buildings[TILE_COUNT_X, TILE_COUNT_Y];
+
+        buildings[2, 4] = SpawnSingleUnit(HouseVariations.Road1, Quaternion.Euler(new Vector3(0, 90, 0)));
+
+        buildings[18, 4] = SpawnSingleUnit(HouseVariations.Road1, Quaternion.Euler(new Vector3(0, -90, 0)));
+
+        buildings[18, 10] = SpawnSingleUnit(HouseVariations.Road1, Quaternion.Euler(new Vector3(0, -90, 0)));
+
+        buildings[18, 16] = SpawnSingleUnit(HouseVariations.Road1, Quaternion.Euler(new Vector3(0, -90, 0)));
+
+        buildings[2, 10] = SpawnSingleUnit(HouseVariations.Road1, Quaternion.Euler(new Vector3(0, 90, 0)));
+
+        buildings[2, 16] = SpawnSingleUnit(HouseVariations.Road1, Quaternion.Euler(new Vector3(0, 90, 0)));
+
+        for (int x = 2; x < 3; x++)
+            for (int y = 0; y < 4; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 2; x < 3; x++)
+            for (int y = 5; y < 10; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 2; x < 3; x++)
+            for (int y = 11; y < 16; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 2; x < 3; x++)
+            for (int y = 17; y < 20; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 4; y < 5; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 90, 0)));
+
+        for (int x = 18; x < 19; x++)
+            for (int y = 5; y < 10; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 18; x < 19; x++)
+            for (int y = 11; y < 16; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 18; x < 19; x++)
+            for (int y = 17; y < 20; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 18; x < 19; x++)
+            for (int y = 0; y < 4; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 10; y < 11; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 90, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 16; y < 17; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.Road3, Quaternion.Euler(new Vector3(0, 90, 0)));
+
+        for (int x = 0; x < 2; x++)
+            for (int y = 0; y < 20; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.BrownSoil, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 17; y < 20; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.BrownSoil, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 19; x < 20; x++)
+            for (int y = 0; y < 20; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.BrownSoil, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 11; y < 16; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.GreenSoil, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 5; y < 10; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.GreenSoil, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+        for (int x = 3; x < 18; x++)
+            for (int y = 0; y < 4; y++)
+                buildings[x, y] = SpawnSingleUnit(HouseVariations.GreenSoil, Quaternion.Euler(new Vector3(0, 0, 0)));
+
+
+
+
+
+
+    }
+
+
 
     private T AddComponentToGameObject<T> (HouseVariations type, GameObject obj) where T : Component
     {
@@ -230,6 +331,27 @@ public class GameManager : Singleton<GameManager>
                 break;
             case HouseVariations.VarThree:
                 componentType = typeof(VariationThree);
+                break;
+            case HouseVariations.GreenSoil:
+                componentType = typeof(GreenSoil);
+                break;
+            case HouseVariations.RedSoil:
+                componentType = typeof(RedSoil);
+                break;
+            case HouseVariations.BrownSoil:
+                componentType = typeof(BrownSoil);
+                break;
+            case HouseVariations.Road1:
+                componentType = typeof(Road1);
+                break;
+            case HouseVariations.Road2:
+                componentType = typeof(Road2);
+                break;
+            case HouseVariations.Road3:
+                componentType = typeof(Road3);
+                break;
+            case HouseVariations.Road4:
+                componentType = typeof(Road4);
                 break;
             default:
                 break;
@@ -256,7 +378,7 @@ public class GameManager : Singleton<GameManager>
 
     private void SpawnTheUnit(HouseVariations hv)
     {
-        buildings[currentHover.x, currentHover.y] = SpawnSingleUnit(hv);
+        buildings[currentHover.x, currentHover.y] = SpawnSingleUnit(hv, transform.rotation);
 
     }
 
@@ -288,6 +410,13 @@ public class GameManager : Singleton<GameManager>
             case HouseVariations.VarOne: return prefabs[0];
             case HouseVariations.VarTwo: return prefabs[1];
             case HouseVariations.VarThree: return prefabs[2];
+            case HouseVariations.GreenSoil: return prefabs[3];
+            case HouseVariations.RedSoil: return prefabs[4];
+            case HouseVariations.BrownSoil: return prefabs[5];
+            case HouseVariations.Road1: return prefabs[6];
+            case HouseVariations.Road2: return prefabs[7];
+            case HouseVariations.Road3: return prefabs[8];
+            case HouseVariations.Road4: return prefabs[9];
             default: return prefabs[0];
         }
     }

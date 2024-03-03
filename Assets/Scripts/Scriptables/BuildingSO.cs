@@ -4,6 +4,7 @@
 public class BuildingSO : ScriptableObject
 {
     public HouseVariations houseVariation;
+    public EnviromentType enviromentType;
     public float constructionTimer;
     public GameObject[] constructionPhases;
 }

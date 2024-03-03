@@ -16,5 +16,5 @@ MonoBehaviour:
   constructionTimer: 7
   constructionPhases:
   - {fileID: 1346866172864440873, guid: a4971e4903d11034caddae9599051ee3, type: 3}
-  - {fileID: 7591257834775341099, guid: 1f9ccccd8d48a744f828251f52884ab7, type: 3}
+  - {fileID: 7591257834775341099, guid: d1b5ffa0786438c4f95a988a49b5f090, type: 3}
   - {fileID: 5712484324339965308, guid: 2213c84d74c4c9d4fab43b435f6a3006, type: 3}
