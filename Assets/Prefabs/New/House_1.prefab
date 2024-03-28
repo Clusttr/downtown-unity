@@ -465,8 +465,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.22, y: 1, z: 1.01}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1.68, y: 1, z: 1.25}
+  m_Center: {x: -0.2, y: 0.5, z: 0.03}
 --- !u!114 &861373792240483647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,9 +479,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb4ff804b3fe004aaf619240d48bc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildingData: {fileID: 11400000, guid: e45dced328b90e14a9dd681e75f25204, type: 2}
   buildingBody: {fileID: 8941872130338842397}
   redMat: {fileID: 2100000, guid: 999e55b73dbc5e3458859251769c0893, type: 2}
   greenMat: {fileID: 2100000, guid: d0b1c6a928ea7774b828fde28716c8cb, type: 2}
+  occupiedCells: []
 --- !u!1 &8322533114488646498
 GameObject:
   m_ObjectHideFlags: 0

@@ -68,9 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb4ff804b3fe004aaf619240d48bc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildingData: {fileID: 11400000, guid: c881fbed50209ca4e8138c2be65a6edc, type: 2}
   buildingBody: {fileID: 4783325141973809088}
   redMat: {fileID: 2100000, guid: 999e55b73dbc5e3458859251769c0893, type: 2}
   greenMat: {fileID: 2100000, guid: d0b1c6a928ea7774b828fde28716c8cb, type: 2}
+  occupiedCells: []
 --- !u!1 &711245902593887438
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2063124519592758981}
   m_Layer: 0
   m_Name: RedSoil
-  m_TagString: Untagged
+  m_TagString: Soil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 6034957751646507721, guid: 06b3212586a0c8b4b86fe43606b870e5, type: 3}
-  - {fileID: -8774133792591422896, guid: 06b3212586a0c8b4b86fe43606b870e5, type: 3}
+  - {fileID: 2100000, guid: bacb278819840c4458df2a39931aafa8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

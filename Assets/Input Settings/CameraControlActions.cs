@@ -53,6 +53,15 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Angle"",
+                    ""type"": ""Button"",
+                    ""id"": ""569d122a-5ed0-4029-afc4-4f27f0c9501e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
                     ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""37805e8b-b20a-4182-96f9-2459a54686bf"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Angle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +163,7 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
         m_Camera_Movement = m_Camera.FindAction("Movement", throwIfNotFound: true);
         m_Camera_Rotate = m_Camera.FindAction("Rotate", throwIfNotFound: true);
         m_Camera_Zoom = m_Camera.FindAction("Zoom", throwIfNotFound: true);
+        m_Camera_Angle = m_Camera.FindAction("Angle", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +228,7 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Camera_Movement;
     private readonly InputAction m_Camera_Rotate;
     private readonly InputAction m_Camera_Zoom;
+    private readonly InputAction m_Camera_Angle;
     public struct CameraActions
     {
         private @CameraControlActions m_Wrapper;
@@ -214,6 +236,7 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Camera_Movement;
         public InputAction @Rotate => m_Wrapper.m_Camera_Rotate;
         public InputAction @Zoom => m_Wrapper.m_Camera_Zoom;
+        public InputAction @Angle => m_Wrapper.m_Camera_Angle;
         public InputActionMap Get() { return m_Wrapper.m_Camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +255,9 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
             @Zoom.started += instance.OnZoom;
             @Zoom.performed += instance.OnZoom;
             @Zoom.canceled += instance.OnZoom;
+            @Angle.started += instance.OnAngle;
+            @Angle.performed += instance.OnAngle;
+            @Angle.canceled += instance.OnAngle;
         }
 
         private void UnregisterCallbacks(ICameraActions instance)
@@ -245,6 +271,9 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
             @Zoom.started -= instance.OnZoom;
             @Zoom.performed -= instance.OnZoom;
             @Zoom.canceled -= instance.OnZoom;
+            @Angle.started -= instance.OnAngle;
+            @Angle.performed -= instance.OnAngle;
+            @Angle.canceled -= instance.OnAngle;
         }
 
         public void RemoveCallbacks(ICameraActions instance)
@@ -267,5 +296,6 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
+        void OnAngle(InputAction.CallbackContext context);
     }
 }

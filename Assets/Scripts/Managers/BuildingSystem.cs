@@ -8,18 +8,15 @@ public class BuildingSystem : MonoBehaviour
 {
 
     public static BuildingSystem current;
-
+    public LayerMask TileLayer;
     public GridLayout gridLayout;
     private Grid grid;
+
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private TileBase whiteTile;
 
-
-    public GameObject building1;
-    public GameObject building2;
-
     private PlacableObject placableObject;
-
+    
 
     private void Awake()
     {
@@ -30,31 +27,13 @@ public class BuildingSystem : MonoBehaviour
 
     private void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.A))
-        //{
-        //    InitializeWithGameObject(building1);
-        //}else if(Input.GetKeyDown(KeyCode.B))
-        //{
-        //    InitializeWithGameObject(building2);    
-        //}
 
         if(placableObject == null)
         {
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //if (CanBePlaced(placableObject))
-            //{
-                
-            //}
-            //else
-            //{
-            //    Destroy(placableObject.gameObject);
-            //}
-        }
-        else if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
             placableObject.Rotate();
         }
@@ -66,10 +45,12 @@ public class BuildingSystem : MonoBehaviour
             return;
 
         placableObject.Place();
-        Vector3Int start = gridLayout.WorldToCell(placableObject.GetStartPosition());
-        //TakeArea(start, placableObject.Size);
-        CanBePlaced(placableObject);
+        Vector3 start = SnapCoordinateToGrid(placableObject.GetTilePivotPosition());
 
+        TakeArea(start, placableObject.Size);
+
+
+        //CanBePlaced(placableObject);
         FindAnyObjectByType<ConstructionUIHandler>().Close();
 
         
@@ -126,7 +107,19 @@ public class BuildingSystem : MonoBehaviour
         return array;
     }
 
+    private Vector3[] GetTileBlockPoint(BoundsInt area)
+    {
+        Vector3[] array = new Vector3[area.size.x * area.size.y * area.size.z];
+        int counter = 0;
 
+        foreach (var item in area.allPositionsWithin)
+        {
+            Vector3Int pos = new Vector3Int(item.x, item.y, 0);
+            array[counter] = grid.GetCellCenterWorld(pos); //tilemap.GetTile(pos);
+            counter++;
+        }
+        return array;
+    }
 
     public void InitializeWithGameObject(GameObject prefab)
     {
@@ -141,22 +134,32 @@ public class BuildingSystem : MonoBehaviour
         FindAnyObjectByType<ConstructionUIHandler>().Open();
     }
 
-    private bool CanBePlaced(PlacableObject placableObject)
+    public bool CanBePlaced(PlacableObject placableObject)
     {
         BoundsInt area = new BoundsInt();
-        area.position = gridLayout.WorldToCell(placableObject.GetStartPosition());
-        area.size = new Vector3Int(area.size.x + 1, area.size.y + 1, area.size.z);
+        area.position = gridLayout.WorldToCell(placableObject.GetTilePivotPosition());
+        area.size = new Vector3Int(placableObject.BuildingData.CellSize.x, placableObject.BuildingData.CellSize.y, 1);
+        //area.size = new Vector3Int(area.size.x + 1, area.size.y + 1, area.size.z);
+        area.size = new Vector3Int(area.size.x + (int)(1f / 0.25f), area.size.y + (int)(1f / 0.25f), area.size.z);
+
+        Vector3[] points = GetTileBlockPoint(area);
 
         
 
-        TileBase[] baseArray = GetTileBlock(area, tilemap);
-        Debug.Log(baseArray.Length);
-
-        foreach (var item in baseArray)
+        foreach (var item in points)
         {
-            Debug.Log(item.name);
-
-            if(item == whiteTile)
+            Collider[] colliders = Physics.OverlapSphere(item, 0.1f, TileLayer);
+            //Debug.Log(colliders.Length);
+            if (colliders.Length > 0)
+            {
+                //Debug.Log(colliders[0].tag);
+                if (colliders[0].tag != "Grass")
+                    return false;
+                GridCell cell = colliders[0].gameObject.GetComponent<GridCell>();
+                if (cell == null || cell.occupied)
+                    return false;
+            }
+            else
             {
                 return false;
             }
@@ -164,10 +167,39 @@ public class BuildingSystem : MonoBehaviour
         return true;
     }
 
-    public void TakeArea(Vector3Int start, Vector3Int size )
+    public void TakeArea(Vector3 start, Vector3Int size )
     {
-        
-        tilemap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.y, start.y + size.y);
 
+        //tilemap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.y, start.y + size.y);
+        //Debug.Log(start + " " + size);
+
+        
+
+        BoundsInt area = new BoundsInt();
+        
+        area.position = gridLayout.WorldToCell(placableObject.GetTilePivotPosition());
+        area.size = new Vector3Int(placableObject.BuildingData.CellSize.x, placableObject.BuildingData.CellSize.y, 1);
+        area.size = new Vector3Int(area.size.x + (int)(1f / 0.25f), area.size.y + (int)(1f / 0.25f), area.size.z);
+
+        //Debug.Log(area.size);
+
+        Vector3[] points = GetTileBlockPoint(area);
+        //Debug.Log(points.Length);
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            //GameObject gameObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            //gameObject.transform.position = points[i];
+            //gameObject.transform.localScale = Vector3.one * 0.2f;
+
+            Collider[] colliders = Physics.OverlapSphere(points[i], 0.1f, TileLayer);
+            if(colliders.Length > 0)
+            {
+                //GameObject tile = colliders[0].gameObject;
+                colliders[0].GetComponent<GridCell>().occupied = true;
+            }
+        }
+
+        
     }
 }

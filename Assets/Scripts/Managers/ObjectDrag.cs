@@ -8,6 +8,13 @@ public class ObjectDrag : MonoBehaviour
     private Vector3 offset;
     public bool isDraging;
 
+    private Vector3 oldPosition;
+    private PlacableObject placableObject;
+
+    private void Start()
+    {
+        placableObject = GetComponent<PlacableObject>();
+    }
 
     private void Update()
     {
@@ -23,6 +30,13 @@ public class ObjectDrag : MonoBehaviour
         {
             Vector3 pos = BuildingSystem.GetMouseWorldPosition() + offset;
             transform.position = BuildingSystem.current.SnapCoordinateToGrid(pos);
+
+            if(oldPosition != pos)
+            {
+                oldPosition = pos;
+                placableObject.CheckPlacementPosibility();
+                
+            }
         }
     }
 

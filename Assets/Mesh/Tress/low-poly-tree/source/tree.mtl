@@ -1,0 +1,52 @@
+# Blender 4.0.2 MTL File: 'None'
+# www.blender.org
+
+newmtl M_BottomPlane
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/max
+
+newmtl M_bark
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/bark.tga
+
+newmtl M_greenRed
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/leaf_redAndGreen.tga
+map_d C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/leaf_opacity.tga
+
+newmtl M_leaf
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/leaf.tga
+map_d C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/leaf_opacity.tga
+
+newmtl M_red
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/leaf_red.tga
+map_d C:/Users/kinny/Documents/Projects/UnityProjects/downtown-unity-main/Assets/Mesh/Tress/low-poly-tree/tex/leaf_opacity.tga

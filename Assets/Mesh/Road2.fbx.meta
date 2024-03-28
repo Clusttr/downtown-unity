@@ -3,7 +3,27 @@ guid: 64be5a760fa1a604dbbd5e3747f6572a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Demarkation1
+    second: {fileID: 2100000, guid: 30e74fa9f872dc145897beb62e1bc8cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road1
+    second: {fileID: 2100000, guid: 86aa85cc448def04ea6484a50fa0ef91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideWalk1
+    second: {fileID: 2100000, guid: c2f7b1da859762546b606fec00da7bf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: 52710414c67efa8458c7a43fc0207f15, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

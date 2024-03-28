@@ -9,11 +9,14 @@ public class CameraController : MonoBehaviour
     private InputAction movement;
     private Transform cameraTransform;
 
+    public AnimationCurve tiltCurve;
+
     //horizontal mmotion
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float speed;
     [SerializeField] private float acceleration = 10f;
     [SerializeField] private float damping = 15f;
+    [SerializeField] private float angleChangeSpeed = 2.0f;
 
     //vertical motion zooming
     [SerializeField] private float stepSize = 2f;
@@ -29,21 +32,25 @@ public class CameraController : MonoBehaviour
     [SerializeField][Range(0f, 0.1f)] private float edgeTolerance = 0.05f;
     [SerializeField] private bool useScreenEdge = true;
 
+    private bool angleChange;
     private Vector3 targetPosition;
 
     private float zoomHeight;
+    private float tiltAngle;
+    
 
     private Vector3 horizontalVelocity;
     private Vector3 lastPosition;
 
     private Vector3 startDrag;
-
+    private Vector3 zoomTarget;
 
 
     void Awake()
     {
         cameraActions = new CameraControlActions();
         cameraTransform = this.GetComponentInChildren<Camera>().transform;
+        
     }
 
     private void OnEnable()
@@ -55,14 +62,18 @@ public class CameraController : MonoBehaviour
         movement = cameraActions.Camera.Movement;
 
         cameraActions.Camera.Rotate.performed += RotateCamera;
-        cameraActions.Camera.Zoom.performed += ZoomCamera;
+        cameraActions.Camera.Zoom.performed += OnMouseScroll;
+        cameraActions.Camera.Angle.performed += (x) => { angleChange = true; };
+        cameraActions.Camera.Angle.canceled += (x) => { angleChange = false; };
         cameraActions.Camera.Enable();
     }
 
     private void OnDisable()
     {
         cameraActions.Camera.Rotate.performed -= RotateCamera;
-        cameraActions.Camera.Zoom.performed -= ZoomCamera;
+        cameraActions.Camera.Zoom.performed -= OnMouseScroll;
+        cameraActions.Camera.Angle.performed -= (x) => { angleChange = true; };
+        cameraActions.Camera.Angle.canceled -= (x) => { angleChange = false; };
         cameraActions.Disable(); 
     }
 
@@ -80,6 +91,7 @@ public class CameraController : MonoBehaviour
 
         UpdateVelocity();
         UpdateCameraPosition();
+        UpdateCamaraAngle();
         UpdateBasePosition(); 
     }
 
@@ -115,6 +127,19 @@ public class CameraController : MonoBehaviour
         return forward;
     }
 
+    private void OnMouseScroll(InputAction.CallbackContext inputValue)
+    {
+        if(angleChange)
+        {
+            //ChangeCameraAngle(-inputValue.ReadValue<Vector2>().y);
+        }
+        else
+        {
+            ZoomCamera(-inputValue.ReadValue<Vector2>().y);
+        }
+        
+    }
+
     private void UpdateBasePosition()
     {
         if(targetPosition.sqrMagnitude > 0.1f)
@@ -142,9 +167,9 @@ public class CameraController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, value * maxRotationSpeed + transform.rotation.eulerAngles.y, 0f);
     }
 
-    private void ZoomCamera(InputAction.CallbackContext inputValue)
+    private void ZoomCamera(float inputValue)
     {
-        float value = -inputValue.ReadValue<Vector2>().y / 100f;
+        float value = inputValue / 100f;
 
         if(Mathf.Abs(value) > 0.1f)
         {
@@ -153,18 +178,37 @@ public class CameraController : MonoBehaviour
                 zoomHeight = minHeight;
             else if(zoomHeight > maxHeight)
                 zoomHeight = maxHeight;
+
+            Vector3 moveDirection = ((cameraTransform.localEulerAngles.x >= 60) ? cameraTransform.forward : (Mathf.Sign(value) * Vector3.up));
+            zoomTarget = new Vector3(cameraTransform.localPosition.x, zoomHeight, cameraTransform.localPosition.z) + moveDirection;
+        }
+    }
+
+    private void ChangeCameraAngle(float inputValue)
+    {
+        float value = inputValue / 100f;
+        if(Mathf.Abs(value) > 0.1f)
+        {
+            tiltAngle = cameraTransform.localEulerAngles.x + value * 2f;
+            if(tiltAngle < 0)
+                tiltAngle = 0;
+            else if(tiltAngle > 60)
+                tiltAngle = 60;
         }
     }
 
     private void UpdateCameraPosition()
     {
-        Vector3 zoomTarget = new Vector3(cameraTransform.localPosition.x, zoomHeight, cameraTransform.localPosition.z);
-        zoomTarget -= zoomSpeed * (zoomHeight - cameraTransform.localPosition.y) * cameraTransform.forward;
-
-        //Vector3 hight = (cameraTransform.localPosition + (cameraTransform.forward * zoomHeight)) * zoomSpeed;
-
         cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, zoomTarget, Time.deltaTime * zoomDampening);
-        //cameraTransform.LookAt(this.transform);
+    }
+
+    private void UpdateCamaraAngle()
+    {
+        float dis = Mathf.Clamp((zoomHeight - minHeight) / (maxHeight - minHeight), 0, 1);
+
+        float testAngle = tiltCurve.Evaluate(dis);
+
+        cameraTransform.localRotation = Quaternion.Slerp(cameraTransform.localRotation, Quaternion.Euler(testAngle, 0, 0), Time.deltaTime * 20);
     }
 
     private void CheckMouseAtScreenEdge()

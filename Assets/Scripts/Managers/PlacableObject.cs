@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlacableObject : MonoBehaviour
 {
+    public BuildingData BuildingData;
     public GameObject buildingBody;
     public Material redMat;
     public Material greenMat;
@@ -13,6 +14,8 @@ public class PlacableObject : MonoBehaviour
     public Vector3Int Size { get; private set; }
     private Vector3[] vertices;
 
+    [HideInInspector] public GridCell[] occupiedCells;
+
     private GameObject dummy;
 
     public void ShowBuildingDummy()
@@ -20,20 +23,9 @@ public class PlacableObject : MonoBehaviour
         dummy = Instantiate(buildingBody, transform);
         buildingBody.gameObject.SetActive(false);
 
+        CheckPlacementPosibility();
 
-        MeshRenderer[] mesh = dummy.GetComponents<MeshRenderer>();
-        //int numberOfMaterials = mesh.materials.Length;
-        //Debug.Log(numberOfMaterials);
 
-        foreach (MeshRenderer meshRenderer in mesh)
-        {
-            Material[] mats = meshRenderer.sharedMaterials;
-            for (int i = 0; i < mats.Length; i++)
-            {
-                mats[i] = greenMat;
-            }
-            meshRenderer.sharedMaterials = mats;
-        }
     }
 
     public void RemoveBuildingDummy()
@@ -43,6 +35,29 @@ public class PlacableObject : MonoBehaviour
         {
             Destroy(dummy);
         }
+    }
+
+    private void UpdateDummyMat(Material material)
+    {
+        MeshRenderer[] mesh = dummy.GetComponents<MeshRenderer>();
+        //int numberOfMaterials = mesh.materials.Length;
+        //Debug.Log(numberOfMaterials);
+
+        foreach (MeshRenderer meshRenderer in mesh)
+        {
+            Material[] mats = meshRenderer.sharedMaterials;
+            for (int i = 0; i < mats.Length; i++)
+            {
+                mats[i] = material;
+            }
+            meshRenderer.sharedMaterials = mats;
+        }
+    }
+
+    public void CheckPlacementPosibility()
+    {
+        bool canPlace = BuildingSystem.current.CanBePlaced(this);
+        UpdateDummyMat((canPlace) ? greenMat : redMat);
     }
 
 
@@ -62,17 +77,21 @@ public class PlacableObject : MonoBehaviour
         for (int i = 0; i < _vertices.Length; i++)
         {
             var worldPos = transform.TransformPoint(vertices[i]);
-            vertices[i] = BuildingSystem.current.gridLayout.WorldToCell(worldPos);
+            _vertices[i] = BuildingSystem.current.gridLayout.WorldToCell(worldPos);
 
         }
 
-        Size = new Vector3Int((int)Mathf.Abs((vertices[0] = vertices[1]).x), (int)Mathf.Abs((vertices[0] - vertices[3]).y), 1);
+        Size = new Vector3Int((int)Mathf.Abs((_vertices[0] = _vertices[1]).x), (int)Mathf.Abs((_vertices[0] - _vertices[3]).y), 1);
 
-        
+
     }
 
-    public Vector3 GetStartPosition()
+    public Vector3 GetTilePivotPosition()
     {
+        if(vertices == null)
+        {
+            return transform.position;
+        }
         return transform.TransformPoint(vertices[0]);
     }
 
@@ -91,7 +110,7 @@ public class PlacableObject : MonoBehaviour
 
         for (int i = 0; i < _vertices.Length; i++)
         {
-            _vertices[i] = vertices[(i + 1) % vertices.Length]; 
+            _vertices[i] = vertices[(i + 1) % vertices.Length];
         }
 
         vertices = _vertices;
