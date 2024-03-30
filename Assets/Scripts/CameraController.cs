@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
@@ -45,13 +46,13 @@ public class CameraController : MonoBehaviour
     private Vector3 startDrag;
     private Vector3 zoomTarget;
 
-
-    void Awake()
+    private void Awake()
     {
         cameraActions = new CameraControlActions();
         cameraTransform = this.GetComponentInChildren<Camera>().transform;
-        
+        zoomTarget = new Vector3(cameraTransform.localPosition.x, maxHeight, cameraTransform.localPosition.z);// + cameraTransform.forward;
     }
+
 
     private void OnEnable()
     {
@@ -179,8 +180,11 @@ public class CameraController : MonoBehaviour
             else if(zoomHeight > maxHeight)
                 zoomHeight = maxHeight;
 
-            Vector3 moveDirection = ((cameraTransform.localEulerAngles.x >= 60) ? cameraTransform.forward : (Mathf.Sign(value) * Vector3.up));
-            zoomTarget = new Vector3(cameraTransform.localPosition.x, zoomHeight, cameraTransform.localPosition.z) + moveDirection;
+            Vector3 moveDirection = ((cameraTransform.localEulerAngles.x >= 60) ? cameraTransform.forward : (Vector3.down));
+            zoomTarget = cameraTransform.localPosition  - Mathf.Sign(value) * moveDirection;
+            zoomTarget.y = Mathf.Clamp(zoomTarget.y * (Mathf.Sin(60 * Mathf.Deg2Rad)), minHeight, maxHeight);
+            zoomTarget.z = -Mathf.Clamp(-zoomTarget.z * (Mathf.Cos(60 * Mathf.Deg2Rad)), minHeight, maxHeight);
+            //zoomTarget = Vector3.ClampMagnitude(zoomTarget, maxHeight);
         }
     }
 
@@ -234,7 +238,7 @@ public class CameraController : MonoBehaviour
         if (!Mouse.current.rightButton.isPressed)
             return;
 
-        Plane plane = new Plane(Vector3.up, Vector3.zero);
+        Plane plane = new Plane(cameraTransform.forward, Vector3.zero);
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if(plane.Raycast(ray, out float distance))
@@ -243,6 +247,21 @@ public class CameraController : MonoBehaviour
                 startDrag = ray.GetPoint(distance);
             else
                 targetPosition += startDrag - ray.GetPoint(distance);
+
+            //targetPosition.z = cameraTransform.forward * 
+            //Debug.Log(targetPosition);
+            if(cameraTransform.forward.z == 1)
+            {
+                targetPosition.z = targetPosition.y;
+                targetPosition.y = 0;
+                
+            }
+            else
+            {
+                targetPosition.y = 0;
+            }
+            
+            
         }
     }
 
