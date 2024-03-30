@@ -61,6 +61,10 @@ public class ConstructionUIHandler : MonoBehaviour
         confirmationUI.DOLocalMoveX(openPosition.x + 100, 1).SetEase(Ease.OutBounce);
     }
 
+    public void OnRotate()
+    {
+        BuildingSystem.current.RotateCurrentBuilding();
+    }
 
     public void OnComfirmClicked()
     {

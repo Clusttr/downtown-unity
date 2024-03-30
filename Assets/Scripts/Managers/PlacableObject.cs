@@ -98,12 +98,15 @@ public class PlacableObject : MonoBehaviour
     private void Start()
     {
         GetColliderVertexPostionLocal();
-        CalculateSizeInCells();
+        //CalculateSizeInCells();
+
+        Size = new Vector3Int(BuildingData.CellSize.x, BuildingData.CellSize.y, 1);
     }
 
     public void Rotate()
     {
         transform.Rotate(new Vector3(0, 90, 0));
+
         Size = new Vector3Int(Size.y, Size.x, 1);
 
         Vector3[] _vertices = new Vector3[this.vertices.Length];

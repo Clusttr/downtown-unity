@@ -10,6 +10,8 @@ public class BuildingSystem : MonoBehaviour
     public static BuildingSystem current;
     public LayerMask TileLayer;
     public GridLayout gridLayout;
+    public GameObject buildingFloor;
+
     private Grid grid;
 
     [SerializeField] private Tilemap tilemap;
@@ -35,7 +37,7 @@ public class BuildingSystem : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            placableObject.Rotate();
+            //placableObject.Rotate();
         }
     }
 
@@ -54,6 +56,14 @@ public class BuildingSystem : MonoBehaviour
         FindAnyObjectByType<ConstructionUIHandler>().Close();
 
         
+    }
+
+    public void RotateCurrentBuilding()
+    {
+        if(placableObject!= null)
+        {
+            placableObject.Rotate();
+        }
     }
 
     public void CancelPlacement()
@@ -178,7 +188,7 @@ public class BuildingSystem : MonoBehaviour
         BoundsInt area = new BoundsInt();
         
         area.position = gridLayout.WorldToCell(placableObject.GetTilePivotPosition());
-        area.size = new Vector3Int(placableObject.BuildingData.CellSize.x, placableObject.BuildingData.CellSize.y, 1);
+        area.size = new Vector3Int(placableObject.Size.x, placableObject.Size.y, 1);
         area.size = new Vector3Int(area.size.x + (int)(1f / 0.25f), area.size.y + (int)(1f / 0.25f), area.size.z);
 
         //Debug.Log(area.size);
@@ -188,9 +198,9 @@ public class BuildingSystem : MonoBehaviour
 
         for (int i = 0; i < points.Length; i++)
         {
-            //GameObject gameObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            //gameObject.transform.position = points[i];
-            //gameObject.transform.localScale = Vector3.one * 0.2f;
+            GameObject gameObject = Instantiate(BuildingSystem.current.buildingFloor, placableObject.transform);// GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            gameObject.transform.position = points[i] + Vector3.up * 0.002f;
+            gameObject.transform.localScale = Vector3.one * 0.25f;
 
             Collider[] colliders = Physics.OverlapSphere(points[i], 0.1f, TileLayer);
             if(colliders.Length > 0)
