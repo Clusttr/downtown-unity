@@ -7,6 +7,7 @@ public class PlacableObject : MonoBehaviour
 {
     public BuildingData BuildingData;
     public GameObject buildingBody;
+    public GameObject constructionBody;
     public Material redMat;
     public Material greenMat;
 
@@ -17,6 +18,9 @@ public class PlacableObject : MonoBehaviour
     [HideInInspector] public GridCell[] occupiedCells;
 
     private GameObject dummy;
+
+    private bool isConstructing;
+    private float constructionTimer;
 
     public void ShowBuildingDummy()
     {
@@ -30,7 +34,7 @@ public class PlacableObject : MonoBehaviour
 
     public void RemoveBuildingDummy()
     {
-        buildingBody.gameObject.SetActive(true);
+        
         if (dummy != null)
         {
             Destroy(dummy);
@@ -97,10 +101,23 @@ public class PlacableObject : MonoBehaviour
 
     private void Start()
     {
+        constructionBody.SetActive(false);
         GetColliderVertexPostionLocal();
         //CalculateSizeInCells();
 
         Size = new Vector3Int(BuildingData.CellSize.x, BuildingData.CellSize.y, 1);
+    }
+
+    private void Update()
+    {
+        if(isConstructing)
+        {
+            constructionTimer -= Time.deltaTime;
+            if(constructionTimer <= 0)
+            {
+                EndConstruction();
+            }
+        }
     }
 
     public void Rotate()
@@ -126,7 +143,28 @@ public class PlacableObject : MonoBehaviour
         Destroy(drag);
 
         RemoveBuildingDummy();
-
+        constructionBody.SetActive(true);
+        StartConstruction();
         Placed = true;
+    }
+
+    public void TestBounds()
+    {
+
+    }
+
+    public void StartConstruction()
+    {
+        isConstructing = true;
+        constructionTimer = BuildingData.contructionTime;
+
+
+    }
+
+    public void EndConstruction()
+    {
+        isConstructing = false;
+        constructionBody.SetActive(false);
+        buildingBody.gameObject.SetActive(true);
     }
 }

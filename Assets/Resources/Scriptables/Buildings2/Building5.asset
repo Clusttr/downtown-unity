@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Building5
   prefab: {fileID: 1412318773965019863, guid: 2c29bf85e161c5349a56298a62c8e396, type: 3}
+  contructionTime: 60
   CellSize: {x: 4, y: 4}
-  constructionPhases: []
+  constructionPhases:
+  - {fileID: 1346866172864440873, guid: a4971e4903d11034caddae9599051ee3, type: 3}
+  - {fileID: 7591257834775341099, guid: d1b5ffa0786438c4f95a988a49b5f090, type: 3}

@@ -1,0 +1,2185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ObjectData>
+  <Object>
+    <Id>25291</Id>
+    <Name>Ściana 10</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>459.999999999578</Length>
+  </Object>
+  <Object>
+    <Id>26017</Id>
+    <Name>Ściana 17</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>360</Length>
+  </Object>
+  <Object>
+    <Id>26014</Id>
+    <Name>Ściana 16</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>250</Length>
+  </Object>
+  <Object>
+    <Id>26011</Id>
+    <Name>Ściana 15</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>360</Length>
+  </Object>
+  <Object>
+    <Id>26008</Id>
+    <Name>Ściana 14</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>250</Length>
+  </Object>
+  <Object>
+    <Id>25297</Id>
+    <Name>Ściana 12</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>459.999999999578</Length>
+  </Object>
+  <Object>
+    <Id>24952</Id>
+    <Name>Ściana 9</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>319.99999999977263</Length>
+  </Object>
+  <Object>
+    <Id>24949</Id>
+    <Name>Ściana 8</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>459.999999999578</Length>
+  </Object>
+  <Object>
+    <Id>24946</Id>
+    <Name>Ściana 7</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>319.99999999977263</Length>
+  </Object>
+  <Object>
+    <Id>24943</Id>
+    <Name>Ściana 6</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>459.999999999578</Length>
+  </Object>
+  <Object>
+    <Id>25300</Id>
+    <Name>Ściana 13</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>319.99999999970896</Length>
+  </Object>
+  <Object>
+    <Id>25294</Id>
+    <Name>Ściana 11</Name>
+    <ObjectType>Wall2D</ObjectType>
+    <Length>319.99999999970896</Length>
+  </Object>
+  <Object>
+    <Id>21085</Id>
+    <Name>Połać stropu 1</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>75.755274139199571</Area>
+    <Pitch>0</Pitch>
+  </Object>
+  <Object>
+    <Id>4272349</Id>
+    <Name>Połać dachu 7</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>1.5068857351777492</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272355</Id>
+    <Name>Połać dachu 10</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>1.5068857351777527</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272357</Id>
+    <Name>Połać dachu 11</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>15.033813497471066</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272359</Id>
+    <Name>Połać dachu 12</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>5.57197283472707</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272743</Id>
+    <Name>Połać dachu 4</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>3.4964394404252976</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272745</Id>
+    <Name>Połać dachu 5</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>20.603224586690668</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272747</Id>
+    <Name>Połać dachu 6</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>18.097010045715734</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>4272737</Id>
+    <Name>Połać dachu 1</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>3.4964394404253016</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>233867</Id>
+    <Name>Wiązar na rzucie 22</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS4</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>22.204434159755788</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>37</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>277378</Id>
+    <Name>Wiązar na rzucie 24</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>RG1</Trussmark>
+    <TrussType>Belka wieńcowa</TrussType>
+    <Ply>2</Ply>
+    <Weight>69.423159298809111</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>264284</Id>
+    <Name>Wiązar na rzucie 23</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>RG1</Trussmark>
+    <TrussType>Belka wieńcowa</TrussType>
+    <Ply>2</Ply>
+    <Weight>69.423159298809111</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>192095</Id>
+    <Name>Wiązar na rzucie 17</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>19</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>191811</Id>
+    <Name>Wiązar na rzucie 16</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>20</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>190556</Id>
+    <Name>Wiązar na rzucie 15</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>21</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>26924</Id>
+    <Name>Wiązar na rzucie 38</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS1</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>52.486578600857136</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>14</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>92936</Id>
+    <Name>Wiązar na rzucie 2</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS1</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>52.486578600857136</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>15</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>93319</Id>
+    <Name>Wiązar na rzucie 3</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS1</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>52.486578600857136</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>16</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>109206</Id>
+    <Name>Wiązar na rzucie 5</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS2</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>44.867238935726064</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>9</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>200388</Id>
+    <Name>Wiązar na rzucie 20</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS2</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>44.867238935726064</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>10</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>200090</Id>
+    <Name>Wiązar na rzucie 19</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS2</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>44.867238935726064</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>11</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>112682</Id>
+    <Name>Wiązar na rzucie 6</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS5</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>70.109267598975009</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>30</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115738</Id>
+    <Name>Wiązar na rzucie 14</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>22</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115654</Id>
+    <Name>Wiązar na rzucie 13</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>23</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115593</Id>
+    <Name>Wiązar na rzucie 12</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>24</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115432</Id>
+    <Name>Wiązar na rzucie 7</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>25</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115448</Id>
+    <Name>Wiązar na rzucie 8</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>26</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115464</Id>
+    <Name>Wiązar na rzucie 9</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>27</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115498</Id>
+    <Name>Wiązar na rzucie 10</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>28</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>115525</Id>
+    <Name>Wiązar na rzucie 11</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>PS3</Trussmark>
+    <TrussType>Belka Posi</TrussType>
+    <Ply>1</Ply>
+    <Weight>57.235667599996347</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>29</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>278902</Id>
+    <Name>Wiązar na rzucie 25</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>RG2</Trussmark>
+    <TrussType>Belka wieńcowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>49.700073601261685</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>2516870</Id>
+    <Name>Wiązar na rzucie 92</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>RG3</Trussmark>
+    <TrussType>Belka wieńcowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>30.477638397122195</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>2522961</Id>
+    <Name>Wiązar na rzucie 93</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>RG3</Trussmark>
+    <TrussType>Belka wieńcowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>30.477638397122195</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>2522944</Id>
+    <Name>Wiązar na rzucie 26</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>RG2</Trussmark>
+    <TrussType>Belka wieńcowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>49.700073601261685</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3514048</Id>
+    <Name>Wiązar na rzucie 4</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B1</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.3360000000123859</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>31</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3514100</Id>
+    <Name>Wiązar na rzucie 18</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bp1</Trussmark>
+    <TrussType>Belka stropowa</TrussType>
+    <Ply>2</Ply>
+    <Weight>26.378669709946813</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>38</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3623598</Id>
+    <Name>Wiązar na rzucie 39</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B2</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>59.585884878844624</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>33</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3910074</Id>
+    <Name>Wiązar na rzucie 44</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>23</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3922496</Id>
+    <Name>Wiązar na rzucie 45</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>28</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3928224</Id>
+    <Name>Wiązar na rzucie 46</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>24</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3934652</Id>
+    <Name>Wiązar na rzucie 47</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>29</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3934656</Id>
+    <Name>Wiązar na rzucie 48</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>32</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3934619</Id>
+    <Name>Wiązar na rzucie 49</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>39</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3943303</Id>
+    <Name>Wiązar na rzucie 50</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b2</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.5942399999999957</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>37</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4050904</Id>
+    <Name>Wiązar na rzucie 52</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>N2</Trussmark>
+    <TrussType>Przewiązka</TrussType>
+    <Ply>2</Ply>
+    <Weight>3.73955520000228</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3958421</Id>
+    <Name>Wiązar na rzucie 51</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>N1</Trussmark>
+    <TrussType>Przewiązka</TrussType>
+    <Ply>2</Ply>
+    <Weight>3.941155200002278</Weight>
+    <ErectionOrderGroup>6</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3528420</Id>
+    <Name>Wiązar na rzucie 1</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S2</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>374.3819520006748</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3552223</Id>
+    <Name>Wiązar na rzucie 33</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S10</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>47.216897451345019</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>13</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3552809</Id>
+    <Name>Wiązar na rzucie 35</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S9</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>55.609343999994337</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>9</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3671332</Id>
+    <Name>Wiązar na rzucie 40</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S14</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>32.165200064988447</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3672403</Id>
+    <Name>Wiązar na rzucie 42</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S16</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>33.355360064985362</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3672550</Id>
+    <Name>Wiązar na rzucie 43</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S18</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>33.611759999998185</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3671474</Id>
+    <Name>Wiązar na rzucie 41</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S15</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>33.611759999998746</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3616939</Id>
+    <Name>Wiązar na rzucie 37</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S13</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>63.788672132226409</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3552951</Id>
+    <Name>Wiązar na rzucie 36</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S8</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>189.42212390122592</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>10</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3552667</Id>
+    <Name>Wiązar na rzucie 34</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S7</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>82.258609920652162</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>14</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3552082</Id>
+    <Name>Wiązar na rzucie 32</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S11</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>48.59051058027358</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>12</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3551782</Id>
+    <Name>Wiązar na rzucie 31</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S5</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>64.950882299513523</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>15</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3535642</Id>
+    <Name>Wiązar na rzucie 28</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S4</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>380.02675199972776</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3568735</Id>
+    <Name>Wiązar na rzucie 30</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S6</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>127.20959999996126</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>11</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3541115</Id>
+    <Name>Wiązar na rzucie 29</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S12</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>36.609731999908419</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3533556</Id>
+    <Name>Wiązar na rzucie 27</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S3</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>379.93536000001274</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>16</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3531547</Id>
+    <Name>Wiązar na rzucie 21</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>S1</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>350.35392000002179</Weight>
+    <ErectionOrderGroup>0</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272392</Id>
+    <Name>Wiązar na rzucie 53</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B10</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>229.37471944030943</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272195</Id>
+    <Name>Wiązar na rzucie 54</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B3</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>27.525125051543565</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>11</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272396</Id>
+    <Name>Wiązar na rzucie 55</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B3</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>27.525125051543565</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>40</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272198</Id>
+    <Name>Wiązar na rzucie 56</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B4</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>274.3365113596787</Weight>
+    <ErectionOrderGroup>1</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272309</Id>
+    <Name>Wiązar na rzucie 57</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B5</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>16.465919999999986</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272313</Id>
+    <Name>Wiązar na rzucie 58</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B6</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>273.85727935852537</Weight>
+    <ErectionOrderGroup>1</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272317</Id>
+    <Name>Wiązar na rzucie 59</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B7</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>138.68928060689728</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>43</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272321</Id>
+    <Name>Wiązar na rzucie 60</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B8</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>16.465919999999997</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>41</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272225</Id>
+    <Name>Wiązar na rzucie 61</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>32</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272206</Id>
+    <Name>Wiązar na rzucie 62</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272208</Id>
+    <Name>Wiązar na rzucie 63</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272200</Id>
+    <Name>Wiązar na rzucie 64</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272202</Id>
+    <Name>Wiązar na rzucie 65</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>13</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272204</Id>
+    <Name>Wiązar na rzucie 66</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>18</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272871</Id>
+    <Name>Wiązar na rzucie 67</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272876</Id>
+    <Name>Wiązar na rzucie 68</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272878</Id>
+    <Name>Wiązar na rzucie 69</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272880</Id>
+    <Name>Wiązar na rzucie 70</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>9</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272882</Id>
+    <Name>Wiązar na rzucie 71</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K5</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>9.7875567480534862</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>10</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272219</Id>
+    <Name>Wiązar na rzucie 72</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K6</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>7.16085617586521</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>35</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272223</Id>
+    <Name>Wiązar na rzucie 73</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K6</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>7.1608563497665134</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>30</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272810</Id>
+    <Name>Wiązar na rzucie 94</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K6</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>7.1608563496768562</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272813</Id>
+    <Name>Wiązar na rzucie 97</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K6</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>7.1608561759578144</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>12</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272844</Id>
+    <Name>Wiązar na rzucie 98</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K6</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>7.1608563497665187</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>13</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272840</Id>
+    <Name>Wiązar na rzucie 101</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K6</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>7.1608561758660834</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272218</Id>
+    <Name>Wiązar na rzucie 74</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K7</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7942008938481147</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>38</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272221</Id>
+    <Name>Wiązar na rzucie 75</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K7</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7942008420601883</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>34</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272809</Id>
+    <Name>Wiązar na rzucie 95</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K7</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7942008420390874</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272812</Id>
+    <Name>Wiązar na rzucie 96</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K7</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7942008938701903</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272842</Id>
+    <Name>Wiązar na rzucie 99</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K7</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7942008420605027</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272839</Id>
+    <Name>Wiązar na rzucie 100</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K7</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.79420089384803</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272417</Id>
+    <Name>Wiązar na rzucie 76</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>34</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272431</Id>
+    <Name>Wiązar na rzucie 77</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>35</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272433</Id>
+    <Name>Wiązar na rzucie 78</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>39</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272435</Id>
+    <Name>Wiązar na rzucie 79</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>41</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272443</Id>
+    <Name>Wiązar na rzucie 80</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>31</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272445</Id>
+    <Name>Wiązar na rzucie 81</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>17</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272447</Id>
+    <Name>Wiązar na rzucie 82</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>12</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272449</Id>
+    <Name>Wiązar na rzucie 83</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272477</Id>
+    <Name>Wiązar na rzucie 84</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>42</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272494</Id>
+    <Name>Wiązar na rzucie 87</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K8</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4207874319857066</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>43</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272451</Id>
+    <Name>Wiązar na rzucie 85</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K9</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.9164266627805033</Weight>
+    <ErectionOrderGroup>4</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272478</Id>
+    <Name>Wiązar na rzucie 86</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K9</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.9164267896566205</Weight>
+    <ErectionOrderGroup>4</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272486</Id>
+    <Name>Wiązar na rzucie 88</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K9</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.9164266628256019</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>46</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272502</Id>
+    <Name>Wiązar na rzucie 89</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K9</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.9164267896142615</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>17</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272215</Id>
+    <Name>Wiązar na rzucie 90</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K10</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.9189960992532189</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>33</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272806</Id>
+    <Name>Wiązar na rzucie 91</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K10</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.9189963918478909</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>14</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272630</Id>
+    <Name>Wiązar na rzucie 102</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K11</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>5.5997542642502651</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>40</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272656</Id>
+    <Name>Wiązar na rzucie 103</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K11</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>5.5997542396703732</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>16</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272488</Id>
+    <Name>Wiązar na rzucie 104</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K12</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>2.7006902804206248</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>45</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272500</Id>
+    <Name>Wiązar na rzucie 105</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K12</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>2.7006902407557782</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>15</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272724</Id>
+    <Name>Wiązar na rzucie 106</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>kr1</Trussmark>
+    <TrussType>Krawężnica</TrussType>
+    <Ply>2</Ply>
+    <Weight>13.497025216500791</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>36</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272824</Id>
+    <Name>Wiązar na rzucie 107</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>kr1</Trussmark>
+    <TrussType>Krawężnica</TrussType>
+    <Ply>2</Ply>
+    <Weight>13.497025216485959</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272847</Id>
+    <Name>Wiązar na rzucie 108</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>kr1</Trussmark>
+    <TrussType>Krawężnica</TrussType>
+    <Ply>2</Ply>
+    <Weight>13.497025216486891</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272367</Id>
+    <Name>Wiązar na rzucie 109</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>kr2</Trussmark>
+    <TrussType>Krawężnica</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.8289999162713979</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272371</Id>
+    <Name>Wiązar na rzucie 110</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>kr2</Trussmark>
+    <TrussType>Krawężnica</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.8289999162714228</Weight>
+    <ErectionOrderGroup>3</ErectionOrderGroup>
+    <ErectionOrderInGroup>44</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4272375</Id>
+    <Name>Wiązar na rzucie 111</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>kr2</Trussmark>
+    <TrussType>Krawężnica</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.8289999162714246</Weight>
+    <ErectionOrderGroup>2</ErectionOrderGroup>
+    <ErectionOrderInGroup>42</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>94037</Id>
+    <Name>Stężenie na rzucie 1</Name>
+    <ObjectType>Brace</ObjectType>
+    <BraceType>Strongback</BraceType>
+  </Object>
+  <Object>
+    <Id>410985</Id>
+    <Name>Połać dachu 1</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>26.868958444452527</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>410990</Id>
+    <Name>Połać dachu 2</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>33.222898214226923</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>410995</Id>
+    <Name>Połać dachu 3</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>27.018913541949694</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>411000</Id>
+    <Name>Połać dachu 4</Name>
+    <ObjectType>RoofSurface</ObjectType>
+    <Area>33.164627619275727</Area>
+    <Pitch>11</Pitch>
+  </Object>
+  <Object>
+    <Id>981713</Id>
+    <Name>Wiązar na rzucie 1</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>G1</Trussmark>
+    <TrussType>Główny</TrussType>
+    <Ply>1</Ply>
+    <Weight>79.293377686511036</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350525</Id>
+    <Name>Wiązar na rzucie 13</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>OB1</Trussmark>
+    <TrussType>Obniżony</TrussType>
+    <Ply>1</Ply>
+    <Weight>79.774697011319162</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350550</Id>
+    <Name>Wiązar na rzucie 26</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>OB2</Trussmark>
+    <TrussType>Obniżony</TrussType>
+    <Ply>1</Ply>
+    <Weight>78.253983405372338</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351094</Id>
+    <Name>Wiązar na rzucie 28</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>NT1</Trussmark>
+    <TrussType>Narożny trójkątny</TrussType>
+    <Ply>2</Ply>
+    <Weight>42.198836486783591</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350688</Id>
+    <Name>Wiązar na rzucie 29</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU4</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>26.009014289467686</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351256</Id>
+    <Name>Wiązar na rzucie 30</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>NT1</Trussmark>
+    <TrussType>Narożny trójkątny</TrussType>
+    <Ply>2</Ply>
+    <Weight>42.172983050838923</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351323</Id>
+    <Name>Wiązar na rzucie 31</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU4</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>26.009014561176969</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>9</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350603</Id>
+    <Name>Wiązar na rzucie 32</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU3</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>17.612025190403841</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350610</Id>
+    <Name>Wiązar na rzucie 33</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo1</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.9450752570772769</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350967</Id>
+    <Name>Wiązar na rzucie 34</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU5</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>15.06696684095936</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350994</Id>
+    <Name>Wiązar na rzucie 35</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU6</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.7927815120479185</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351013</Id>
+    <Name>Wiązar na rzucie 36</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K2</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.1473001839128245</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351014</Id>
+    <Name>Wiązar na rzucie 37</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo2</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.027075257070341</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350555</Id>
+    <Name>Wiązar na rzucie 38</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU2</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>11.06758885042907</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350533</Id>
+    <Name>Wiązar na rzucie 39</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K1</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7084093486306369</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350516</Id>
+    <Name>Wiązar na rzucie 40</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU1</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>22.642359382746577</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351623</Id>
+    <Name>Wiązar na rzucie 41</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU8</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>16.318845995854964</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>17</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351063</Id>
+    <Name>Wiązar na rzucie 42</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU3</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>17.6120253172874</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>12</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351629</Id>
+    <Name>Wiązar na rzucie 43</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU5</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>15.066966742367697</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>14</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351066</Id>
+    <Name>Wiązar na rzucie 44</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo1</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.945075257187475</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351069</Id>
+    <Name>Wiązar na rzucie 45</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU6</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.79278126177382</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>15</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351643</Id>
+    <Name>Wiązar na rzucie 46</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K2</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.1473001116868762</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>29</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351067</Id>
+    <Name>Wiązar na rzucie 47</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU2</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>11.067588913652978</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>13</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351074</Id>
+    <Name>Wiązar na rzucie 48</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K1</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7084092919995846</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>26</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351072</Id>
+    <Name>Wiązar na rzucie 49</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo2</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.0270752570844239</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>9</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1351103</Id>
+    <Name>Wiązar na rzucie 50</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU7</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.5148704617151649</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1350547</Id>
+    <Name>Wiązar na rzucie 27</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>OB3</Trussmark>
+    <TrussType>Obniżony</TrussType>
+    <Ply>2</Ply>
+    <Weight>79.764697950606333</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553772</Id>
+    <Name>Wiązar na rzucie 51</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>NT1</Trussmark>
+    <TrussType>Narożny trójkątny</TrussType>
+    <Ply>2</Ply>
+    <Weight>42.172983051073864</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553783</Id>
+    <Name>Wiązar na rzucie 52</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU4</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>26.009014561224316</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>12</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553784</Id>
+    <Name>Wiązar na rzucie 53</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>NT1</Trussmark>
+    <TrussType>Narożny trójkątny</TrussType>
+    <Ply>2</Ply>
+    <Weight>42.1988364883328</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553824</Id>
+    <Name>Wiązar na rzucie 54</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU4</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>26.009014289419756</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>14</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553768</Id>
+    <Name>Wiązar na rzucie 55</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU1</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>22.64235999625863</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>10</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1554393</Id>
+    <Name>Wiązar na rzucie 56</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU1</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>22.642359382720091</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>18</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553800</Id>
+    <Name>Wiązar na rzucie 14</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>OB1</Trussmark>
+    <TrussType>Obniżony</TrussType>
+    <Ply>1</Ply>
+    <Weight>79.774697011319162</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553823</Id>
+    <Name>Wiązar na rzucie 57</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>OB2</Trussmark>
+    <TrussType>Obniżony</TrussType>
+    <Ply>1</Ply>
+    <Weight>78.253983405372338</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553849</Id>
+    <Name>Wiązar na rzucie 58</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>OB3</Trussmark>
+    <TrussType>Obniżony</TrussType>
+    <Ply>2</Ply>
+    <Weight>79.764697950606333</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553790</Id>
+    <Name>Wiązar na rzucie 59</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU3</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>17.612025317314863</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553887</Id>
+    <Name>Wiązar na rzucie 60</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo1</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.9450752570633707</Weight>
+    <ErectionOrderGroup>13</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553794</Id>
+    <Name>Wiązar na rzucie 61</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU5</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>15.066966742347056</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553831</Id>
+    <Name>Wiązar na rzucie 62</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU6</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.7927812617657715</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553797</Id>
+    <Name>Wiązar na rzucie 63</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K2</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.14730011168661</Weight>
+    <ErectionOrderGroup>14</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553835</Id>
+    <Name>Wiązar na rzucie 64</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo2</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.0270752570837081</Weight>
+    <ErectionOrderGroup>13</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553793</Id>
+    <Name>Wiązar na rzucie 65</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU2</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>11.067588913663858</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553798</Id>
+    <Name>Wiązar na rzucie 66</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K1</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.7084092920004879</Weight>
+    <ErectionOrderGroup>14</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1554071</Id>
+    <Name>Wiązar na rzucie 67</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU3</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>17.612025190377835</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>20</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1554072</Id>
+    <Name>Wiązar na rzucie 68</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU5</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>15.066966840981332</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>24</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553916</Id>
+    <Name>Wiązar na rzucie 69</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo1</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.9450752572046017</Weight>
+    <ErectionOrderGroup>13</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553917</Id>
+    <Name>Wiązar na rzucie 70</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU6</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>8.7927815120561377</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>27</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1554391</Id>
+    <Name>Wiązar na rzucie 71</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K2</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.1473001839132269</Weight>
+    <ErectionOrderGroup>14</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1554073</Id>
+    <Name>Wiązar na rzucie 72</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU2</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>11.067588850418703</Weight>
+    <ErectionOrderGroup>12</ErectionOrderGroup>
+    <ErectionOrderInGroup>22</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1554076</Id>
+    <Name>Wiązar na rzucie 73</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K1</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>3.708409348629917</Weight>
+    <ErectionOrderGroup>14</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553839</Id>
+    <Name>Wiązar na rzucie 74</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>bo2</Trussmark>
+    <TrussType>Belka okapowa</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.0270752570710364</Weight>
+    <ErectionOrderGroup>13</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1559311</Id>
+    <Name>Wiązar na rzucie 6</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>b1</Trussmark>
+    <TrussType>Wymian stropowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>5.4966599999999932</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1566683</Id>
+    <Name>Wiązar na rzucie 2</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>p1</Trussmark>
+    <TrussType>Wymian krokwiowy</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.4443599156455926</Weight>
+    <ErectionOrderGroup>11</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1576523</Id>
+    <Name>Wiązar na rzucie 3</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K3</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>4.7326620598284013</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>10</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1576988</Id>
+    <Name>Wiązar na rzucie 4</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>K4</Trussmark>
+    <TrussType>Krokiew</TrussType>
+    <Ply>1</Ply>
+    <Weight>2.2637818163138324</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>11</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>1553827</Id>
+    <Name>Wiązar na rzucie 75</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>KU7</Trussmark>
+    <TrussType>Kulawka</TrussType>
+    <Ply>1</Ply>
+    <Weight>6.5148704617151649</Weight>
+    <ErectionOrderGroup>10</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>2875751</Id>
+    <Name>Wiązar na rzucie 5</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>B9</Trussmark>
+    <TrussType>Belka</TrussType>
+    <Ply>1</Ply>
+    <Weight>41.152421241992343</Weight>
+    <ErectionOrderGroup>9</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3806201</Id>
+    <Name>Wiązar na rzucie 7</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP18</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>354.95795959394479</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>13</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3807207</Id>
+    <Name>Wiązar na rzucie 8</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP19</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>368.39674562820545</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>4</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3808129</Id>
+    <Name>Wiązar na rzucie 9</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP20</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>380.07443827020415</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>0</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3809117</Id>
+    <Name>Wiązar na rzucie 10</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP21</Trussmark>
+    <TrussType>Ściana szkieletowa - zewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>375.52021631521478</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>5</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3821123</Id>
+    <Name>Wiązar na rzucie 11</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP22</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>221.72784488252665</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>8</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3977058</Id>
+    <Name>Wiązar na rzucie 12</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP1</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>41.901820987423662</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>9</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3977167</Id>
+    <Name>Wiązar na rzucie 15</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP2</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>32.626899502192394</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>6</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3977399</Id>
+    <Name>Wiązar na rzucie 16</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP3</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>69.870600042407872</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>2</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3977508</Id>
+    <Name>Wiązar na rzucie 17</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP4</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>44.03466968738465</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>10</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3977697</Id>
+    <Name>Wiązar na rzucie 18</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP5</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>50.299774213911469</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>1</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>3980339</Id>
+    <Name>Wiązar na rzucie 19</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP6</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>44.034669720322604</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>11</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4012373</Id>
+    <Name>Wiązar na rzucie 20</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP7</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>28.974340066321204</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>7</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4015458</Id>
+    <Name>Wiązar na rzucie 21</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP8</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>85.0348799995236</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>3</ErectionOrderInGroup>
+  </Object>
+  <Object>
+    <Id>4020682</Id>
+    <Name>Wiązar na rzucie 22</Name>
+    <ObjectType>LayoutFrame</ObjectType>
+    <Trussmark>WP9</Trussmark>
+    <TrussType>Ściana szkieletowa - wewnętrzna</TrussType>
+    <Ply>1</Ply>
+    <Weight>48.082432200115385</Weight>
+    <ErectionOrderGroup>7</ErectionOrderGroup>
+    <ErectionOrderInGroup>12</ErectionOrderInGroup>
+  </Object>
+</ObjectData>

@@ -7,6 +7,7 @@ public class BuildingData : ScriptableObject
 {
     public string Name;
     public GameObject prefab;
+    public float contructionTime = 60;
     public Vector2Int CellSize;
 
     public GameObject[] constructionPhases;
