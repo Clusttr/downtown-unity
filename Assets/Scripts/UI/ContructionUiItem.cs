@@ -21,7 +21,7 @@ public class BuildableUiItem : MonoBehaviour, IPointerDownHandler, IPointerMoveH
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+
 
         //
 
@@ -30,12 +30,12 @@ public class BuildableUiItem : MonoBehaviour, IPointerDownHandler, IPointerMoveH
 
     public void OnDrag(PointerEventData eventData)
     {
-        
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -56,16 +56,18 @@ public class BuildableUiItem : MonoBehaviour, IPointerDownHandler, IPointerMoveH
 
         float disY = (eventData.position.y - startClickPoint.y);
         float disX = (eventData.position.x - startClickPoint.x);
-        if(disX > 20)
+        if (disX > 20)
         {
             stopDragOnThisFrame = true;
         }
 
-        if(disY > 5)
+        if (disY > 5)
         {
             pointerDown = false;
             DropBuiding();
             Debug.Log("Drag");
+            Functions functions = new Functions();
+            functions.InsertBuilding();
         }
     }
 
