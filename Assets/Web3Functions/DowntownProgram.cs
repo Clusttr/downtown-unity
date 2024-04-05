@@ -17,6 +17,7 @@ using DowntownProgram.Program;
 using DowntownProgram.Errors;
 using DowntownProgram.Accounts;
 using DowntownProgram.Types;
+using System.Diagnostics;
 
 namespace DowntownProgram
 {
@@ -361,8 +362,24 @@ namespace DowntownProgram
 
             public static Solana.Unity.Rpc.Models.TransactionInstruction InsertHouse(InsertHouseAccounts accounts, byte houseVariant, long positionX, long positionY, long positionZ, PublicKey programId)
             {
-                List<Solana.Unity.Rpc.Models.AccountMeta> keys = new()
-                {Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.Signer, true), Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.Town, false), Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.UserNftAta, false), Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.NftVault, false), Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.NftMint, false), Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.SystemProgram, false), Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.TokenProgram, false), Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.AssociatedTokenProgram, false)};
+                UnityEngine.Debug.Log(accounts.SystemProgram == null);
+                UnityEngine.Debug.Log(accounts.TokenProgram == null);
+                UnityEngine.Debug.Log(accounts.AssociatedTokenProgram == null);
+
+                //Error here. Some values are not initialized properly
+
+                List<Solana.Unity.Rpc.Models.AccountMeta> keys = new List<Solana.Unity.Rpc.Models.AccountMeta>
+                {
+                    Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.Signer, true), 
+                    Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.Town, false), 
+                    Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.UserNftAta, false), 
+                    Solana.Unity.Rpc.Models.AccountMeta.Writable(accounts.NftVault, false), 
+                    Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.NftMint, false), 
+                    Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.SystemProgram, false), 
+                    Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.TokenProgram, false), 
+                    Solana.Unity.Rpc.Models.AccountMeta.ReadOnly(accounts.AssociatedTokenProgram, false)
+                };
+
                 byte[] _data = new byte[1200];
                 int offset = 0;
                 _data.WriteU64(16117548766784636737UL, offset);

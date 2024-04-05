@@ -1,31 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Text;
 using DowntownProgram;
 using DowntownProgram.Program;
 using Solana.Unity.Programs;
 using Solana.Unity.Rpc;
-using Solana.Unity.Rpc.Builders;
-using Solana.Unity.Rpc.Core.Http;
-using Solana.Unity.Rpc.Messages;
-using Solana.Unity.Rpc.Models;
 using Solana.Unity.Wallet;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Functions : MonoBehaviour
+public class Web3Functions : Singleton<Web3Functions>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 
     private static readonly IRpcClient rpcClient = ClientFactory.GetClient(Cluster.DevNet);
     private static readonly IStreamingRpcClient streamingRpcClient = ClientFactory.GetStreamingClient(Cluster.DevNet);
