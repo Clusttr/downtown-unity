@@ -26,4 +26,9 @@ public class Billboard : MonoBehaviour
     {
         amountText.text = $"${amount}";
     }
+
+    public void ClaimRent()
+    {
+        transform.root.GetComponent<PlacableObject>().ClaimRent();
+    }
 }

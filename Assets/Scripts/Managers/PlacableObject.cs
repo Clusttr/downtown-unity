@@ -44,19 +44,30 @@ public class PlacableObject : MonoBehaviour
         GetColliderVertexPostionLocal();
         //CalculateSizeInCells();
 
-        //canvas.SetActive(false);
+        canvas.SetActive(false);
 
         Size = new Vector3Int(BuildingData.CellSize.x, BuildingData.CellSize.y, 1);
     }
 
     public void GenerateRent()
     {
-        canvas.SetActive(true);
         totalRent += rentAmount;
 
+        if(totalRent > 100)
+        {
+            canvas.SetActive(true);
+        }
         canvas.GetComponent<Billboard>().UpdateAmount(totalRent);
 
-        //rentAmountText.text = $"${totalRent}";
+    }
+
+    public void ClaimRent()
+    {
+        int value = totalRent;
+
+        totalRent = 0;
+        canvas.SetActive(false);
+        canvas.GetComponent<Billboard>().UpdateAmount(totalRent);
     }
 
 

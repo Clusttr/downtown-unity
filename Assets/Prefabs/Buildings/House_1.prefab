@@ -441,7 +441,6 @@ MonoBehaviour:
   timeToAddRent: 5
   rentAmount: 50
   totalRent: 0
-  rentAmountText: {fileID: 4913911002635819497}
   buidlingFloors: []
   buildingGridCells: []
 --- !u!1 &8322533114488646498
@@ -564,7 +563,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6267494455808860113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2422395741312485100}
+        m_TargetAssemblyTypeName: Billboard, Assembly-CSharp
+        m_MethodName: ClaimRent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6511800085894220320
 MonoBehaviour:
   m_ObjectHideFlags: 0

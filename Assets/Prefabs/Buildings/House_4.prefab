@@ -196,7 +196,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9105781825761789152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6428734759464374962}
+        m_TargetAssemblyTypeName: Billboard, Assembly-CSharp
+        m_MethodName: ClaimRent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4933962307613893304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1255324780355505541}
-  BuildingData: {fileID: 11400000, guid: e45dced328b90e14a9dd681e75f25204, type: 2}
+  BuildingData: {fileID: 11400000, guid: 3d3fcd84699ebe3479a739e4b6d77e3c, type: 2}
   buildingBody: {fileID: 108021393846900676}
   constructionBody: {fileID: 8290423484272600441}
   redMat: {fileID: 2100000, guid: 999e55b73dbc5e3458859251769c0893, type: 2}
@@ -540,7 +552,6 @@ MonoBehaviour:
   timeToAddRent: 30
   rentAmount: 50
   totalRent: 0
-  rentAmountText: {fileID: 5221728600230020838}
   buidlingFloors: []
   buildingGridCells: []
 --- !u!1 &8315600060439411675

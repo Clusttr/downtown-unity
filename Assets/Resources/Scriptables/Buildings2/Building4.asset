@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Building4
   prefab: {fileID: 6096681645670084474, guid: 324bd24e4981efb478be4dc313131194, type: 3}
   contructionTime: 60
-  CellSize: {x: 4, y: 4}
+  CellSize: {x: 2, y: 4}
   constructionPhases:
   - {fileID: 1346866172864440873, guid: a4971e4903d11034caddae9599051ee3, type: 3}
   - {fileID: 7591257834775341099, guid: d1b5ffa0786438c4f95a988a49b5f090, type: 3}

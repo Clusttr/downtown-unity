@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Building3
   prefab: {fileID: 3409183665984435200, guid: 549140f5ef6ae0d45a123e3ade1a6026, type: 3}
   contructionTime: 60
-  CellSize: {x: 4, y: 4}
+  CellSize: {x: 2, y: 2}
   constructionPhases:
   - {fileID: 1346866172864440873, guid: a4971e4903d11034caddae9599051ee3, type: 3}
   - {fileID: 7591257834775341099, guid: d1b5ffa0786438c4f95a988a49b5f090, type: 3}

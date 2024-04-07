@@ -55,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.78, y: 1, z: 1.99}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1.82, y: 1, z: 1.99}
+  m_Center: {x: 0.24, y: 0.5, z: 0}
 --- !u!114 &6040551165273119708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +78,6 @@ MonoBehaviour:
   timeToAddRent: 30
   rentAmount: 50
   totalRent: 0
-  rentAmountText: {fileID: 9015480572668775433}
   buidlingFloors: []
   buildingGridCells: []
 --- !u!1 &913678762310617983
@@ -394,7 +393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9206448000020097911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6049634506649873651}
+        m_TargetAssemblyTypeName: Billboard, Assembly-CSharp
+        m_MethodName: ClaimRent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5415911135839658618
 MonoBehaviour:
   m_ObjectHideFlags: 0

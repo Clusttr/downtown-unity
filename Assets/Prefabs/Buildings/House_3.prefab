@@ -131,8 +131,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.25}
-  m_Center: {x: -0, y: 0.5, z: 0.03}
+  m_Size: {x: 1.14, y: 1, z: 1.38}
+  m_Center: {x: -0.02, y: 0.5, z: 0}
 --- !u!114 &4821090013105178134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 4708059370064281879}
-  BuildingData: {fileID: 11400000, guid: e45dced328b90e14a9dd681e75f25204, type: 2}
+  BuildingData: {fileID: 11400000, guid: 59129e03c2fe2384ca91fe67999ad10d, type: 2}
   buildingBody: {fileID: 2484644073859921454}
   constructionBody: {fileID: 1438704993828822283}
   redMat: {fileID: 2100000, guid: 999e55b73dbc5e3458859251769c0893, type: 2}
@@ -154,7 +154,6 @@ MonoBehaviour:
   timeToAddRent: 30
   rentAmount: 50
   totalRent: 0
-  rentAmountText: {fileID: 4069282417675783859}
   buidlingFloors: []
   buildingGridCells: []
 --- !u!1 &4485821606815920047
@@ -528,7 +527,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1520171944203073770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2820901382291198696}
+        m_TargetAssemblyTypeName: Billboard, Assembly-CSharp
+        m_MethodName: ClaimRent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &186446747868751492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,7 +690,7 @@ PrefabInstance:
     - target: {fileID: 8106536002657532429, guid: d1b5ffa0786438c4f95a988a49b5f090,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5223258
+      value: 1.076132
       objectReference: {fileID: 0}
     - target: {fileID: 8106536002657532429, guid: d1b5ffa0786438c4f95a988a49b5f090,
         type: 3}
@@ -689,7 +700,7 @@ PrefabInstance:
     - target: {fileID: 8106536002657532429, guid: d1b5ffa0786438c4f95a988a49b5f090,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1856
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8106536002657532429, guid: d1b5ffa0786438c4f95a988a49b5f090,
         type: 3}
