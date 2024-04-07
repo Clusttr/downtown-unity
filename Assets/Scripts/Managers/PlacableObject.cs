@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using TMPro;
 using UnityEngine;
 
 public class PlacableObject : MonoBehaviour
 {
+    public GameObject canvas;
     public BuildingData BuildingData;
     public GameObject buildingBody;
     public GameObject constructionBody;
@@ -13,14 +15,50 @@ public class PlacableObject : MonoBehaviour
 
     public bool Placed { get; private set; }
     public Vector3Int Size { get; private set; }
+
+    [Header("Rent")]
+    public float timeToAddRent = 30;
+    public int rentAmount = 50;
+    public int totalRent;
+
     private Vector3[] vertices;
 
-    [HideInInspector] public GridCell[] occupiedCells;
+    [HideInInspector] public List<GridCell> buidlingFloors;
+    [HideInInspector] public List<GridCell> buildingGridCells;
 
     private GameObject dummy;
 
     private bool isConstructing;
     private float constructionTimer;
+
+    private bool isSelected;
+
+
+    private void Start()
+    {
+        buidlingFloors = new List<GridCell>();
+        buildingGridCells = new List<GridCell>();
+
+
+        constructionBody.SetActive(false);
+        GetColliderVertexPostionLocal();
+        //CalculateSizeInCells();
+
+        //canvas.SetActive(false);
+
+        Size = new Vector3Int(BuildingData.CellSize.x, BuildingData.CellSize.y, 1);
+    }
+
+    public void GenerateRent()
+    {
+        canvas.SetActive(true);
+        totalRent += rentAmount;
+
+        canvas.GetComponent<Billboard>().UpdateAmount(totalRent);
+
+        //rentAmountText.text = $"${totalRent}";
+    }
+
 
     public void ShowBuildingDummy()
     {
@@ -99,14 +137,7 @@ public class PlacableObject : MonoBehaviour
         return transform.TransformPoint(vertices[0]);
     }
 
-    private void Start()
-    {
-        constructionBody.SetActive(false);
-        GetColliderVertexPostionLocal();
-        //CalculateSizeInCells();
-
-        Size = new Vector3Int(BuildingData.CellSize.x, BuildingData.CellSize.y, 1);
-    }
+    
 
     private void Update()
     {
@@ -146,10 +177,15 @@ public class PlacableObject : MonoBehaviour
         constructionBody.SetActive(true);
         StartConstruction();
         Placed = true;
+
+
+        
     }
 
     public void TestBounds()
     {
+        //GetColliderVertexPostionLocal();
+       // Size = new Vector3Int(BuildingData.CellSize.x, BuildingData.CellSize.y, 1);
 
     }
 
@@ -166,5 +202,26 @@ public class PlacableObject : MonoBehaviour
         isConstructing = false;
         constructionBody.SetActive(false);
         buildingBody.gameObject.SetActive(true);
+        InvokeRepeating(nameof(GenerateRent), timeToAddRent, timeToAddRent);
+
+    }
+
+
+    public void HighlightFloor(bool selected)
+    {
+
+        for (int i = 0; i < buidlingFloors.Count; i++)
+        {
+            if(selected)
+            {
+                buidlingFloors[i].GetComponent<Animator>().CrossFadeInFixedTime("FadeUP", 0.1f, 0);
+            }
+            else
+            {
+                buidlingFloors[i].GetComponent<Animator>().CrossFadeInFixedTime("Normal", 0.1f, 0);
+            }
+            
+        }
+
     }
 }

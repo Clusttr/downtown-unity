@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
@@ -10,8 +11,12 @@ public class ConstructionUIHandler : MonoBehaviour
 
     public RectTransform confirmationUI;
     public RectTransform constructionUI;
+    public RectTransform buildingSelectionUI;
+
     public Button constructionBarButton;
     public UIFlippable flipabbleImage;
+
+    public BuildableUiItem[] buildableUiItems;
 
     public Vector3 openPosition;
 
@@ -31,6 +36,7 @@ public class ConstructionUIHandler : MonoBehaviour
         Debug.Log(constructionUI.position);
 
         Close();
+        ToggleBuidingSelectView(false);
     }
 
 
@@ -51,6 +57,8 @@ public class ConstructionUIHandler : MonoBehaviour
         flipabbleImage.GetComponent<Graphic>().SetVerticesDirty();
     }
 
+
+
     public void Open()
     {
         confirmationUI.DOLocalMoveX(openPosition.x, 1).SetEase(Ease.OutBounce);
@@ -60,6 +68,19 @@ public class ConstructionUIHandler : MonoBehaviour
     {
         confirmationUI.DOLocalMoveX(openPosition.x + 100, 1).SetEase(Ease.OutBounce);
     }
+
+    public void ToggleBuidingSelectView(bool open)
+    {
+        if(open)
+        {
+            buildingSelectionUI.DOLocalMoveX(openPosition.x, 1).SetEase(Ease.OutBounce);
+        }
+        else
+        {
+            buildingSelectionUI.DOLocalMoveX(openPosition.x + 100, 1).SetEase(Ease.OutBounce);
+        }
+    }
+
 
     public void OnRotate()
     {
@@ -76,5 +97,31 @@ public class ConstructionUIHandler : MonoBehaviour
     {
         BuildingSystem.current.CancelPlacement();
         Close();
+    }
+
+    public void OnDeleteClicked()
+    {
+        ToggleBuidingSelectView(false);
+
+        BuildingSystem.current.RemoveSelectedBuilding();
+    }
+
+    public void UpdateBuildingItemList(string[] buildings)
+    {
+
+        for (int i = 0; i < buildableUiItems.Length; i++)
+        {
+            buildableUiItems[i].gameObject.SetActive(true);
+            for (int x = 0; x < buildings.Length; x++)
+            {
+                if (buildableUiItems[i].buildingData.Name == buildings[x])
+                {
+                    buildableUiItems[i].gameObject.SetActive(false);
+                    continue;
+                }
+            }
+
+            
+        }
     }
 }

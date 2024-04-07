@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 659151424303098147}
   - component: {fileID: 4529304083123318757}
   - component: {fileID: 5828771868434640245}
+  - component: {fileID: 801794582950474675}
   m_Layer: 6
   m_Name: BuidingFloor
   m_TagString: Untagged
@@ -122,6 +123,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   occupied: 0
   highlight: {fileID: 0}
+--- !u!95 &801794582950474675
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2229775129169607191}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e96e2033ae5875042b78d4fcf75f5060, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7165141590628581042
 GameObject:
   m_ObjectHideFlags: 0

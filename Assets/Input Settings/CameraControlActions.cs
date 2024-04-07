@@ -154,6 +154,34 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""BuildingSys"",
+            ""id"": ""00968a38-ee55-4d7f-81dd-75f8ef735efe"",
+            ""actions"": [
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1cd0d8a-8c27-4055-b575-43a3265a5a55"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e3a46f3a-5afe-4640-9bc0-fa377dd397cc"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -164,6 +192,9 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
         m_Camera_Rotate = m_Camera.FindAction("Rotate", throwIfNotFound: true);
         m_Camera_Zoom = m_Camera.FindAction("Zoom", throwIfNotFound: true);
         m_Camera_Angle = m_Camera.FindAction("Angle", throwIfNotFound: true);
+        // BuildingSys
+        m_BuildingSys = asset.FindActionMap("BuildingSys", throwIfNotFound: true);
+        m_BuildingSys_Select = m_BuildingSys.FindAction("Select", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -291,11 +322,61 @@ public partial class @CameraControlActions: IInputActionCollection2, IDisposable
         }
     }
     public CameraActions @Camera => new CameraActions(this);
+
+    // BuildingSys
+    private readonly InputActionMap m_BuildingSys;
+    private List<IBuildingSysActions> m_BuildingSysActionsCallbackInterfaces = new List<IBuildingSysActions>();
+    private readonly InputAction m_BuildingSys_Select;
+    public struct BuildingSysActions
+    {
+        private @CameraControlActions m_Wrapper;
+        public BuildingSysActions(@CameraControlActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Select => m_Wrapper.m_BuildingSys_Select;
+        public InputActionMap Get() { return m_Wrapper.m_BuildingSys; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(BuildingSysActions set) { return set.Get(); }
+        public void AddCallbacks(IBuildingSysActions instance)
+        {
+            if (instance == null || m_Wrapper.m_BuildingSysActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BuildingSysActionsCallbackInterfaces.Add(instance);
+            @Select.started += instance.OnSelect;
+            @Select.performed += instance.OnSelect;
+            @Select.canceled += instance.OnSelect;
+        }
+
+        private void UnregisterCallbacks(IBuildingSysActions instance)
+        {
+            @Select.started -= instance.OnSelect;
+            @Select.performed -= instance.OnSelect;
+            @Select.canceled -= instance.OnSelect;
+        }
+
+        public void RemoveCallbacks(IBuildingSysActions instance)
+        {
+            if (m_Wrapper.m_BuildingSysActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IBuildingSysActions instance)
+        {
+            foreach (var item in m_Wrapper.m_BuildingSysActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_BuildingSysActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public BuildingSysActions @BuildingSys => new BuildingSysActions(this);
     public interface ICameraActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
         void OnAngle(InputAction.CallbackContext context);
+    }
+    public interface IBuildingSysActions
+    {
+        void OnSelect(InputAction.CallbackContext context);
     }
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEditor.Progress;
@@ -12,19 +14,36 @@ public class BuildingSystem : MonoBehaviour
     public GridLayout gridLayout;
     public GameObject buildingFloor;
 
-    private Grid grid;
+    public Grid grid;
 
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private TileBase whiteTile;
 
     private PlacableObject placableObject;
-    
+    private PlacableObject currentSelection;
+
+
+    private bool clickOnABuilding;
+    private float timeToSelectABuilding = 1f;
+    private float timeToSelectABuildingTimer = 0;
+    private Vector3 startClickPoint;
+
+    private List<PlacableObject> createdBuidings;
+    private DateTime clickTime;
+
 
     private void Awake()
     {
         current = this;
         grid = gridLayout.GetComponent<Grid>();
+        createdBuidings = new List<PlacableObject>();
 
+    }
+
+    private void Start()
+    {
+        GameManager.Instance.cameraActions.BuildingSys.Select.performed += (x) => OnInputMouseLeftButton(true);
+        GameManager.Instance.cameraActions.BuildingSys.Select.canceled += (x) => OnInputMouseLeftButton(false);
     }
 
     private void Update()
@@ -35,11 +54,133 @@ public class BuildingSystem : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(clickOnABuilding)
         {
-            //placableObject.Rotate();
+            timeToSelectABuildingTimer += Time.deltaTime;
+            if (GetMouseHitEvent(out RaycastHit raycastHit))
+            {
+                if (raycastHit.collider.tag == "Building")
+                {
+                    float dis = Vector3.Distance(startClickPoint, raycastHit.point);
+                    if(dis > 0.2f)
+                    {
+                        clickOnABuilding = false;
+                        currentSelection = null;
+                        return;
+                    }
+                }
+            }
+            
+
+            if (timeToSelectABuildingTimer> timeToSelectABuilding)
+            {
+                clickOnABuilding = false;
+                timeToSelectABuildingTimer = 0;
+                SelectedPlacedBuidling();
+            }
+        }
+        
+    }
+
+
+    private void OnInputMouseLeftButton(bool down)
+    {
+        //Debug.Log(down);
+
+        if(down)
+        {
+            if (GetMouseHitEvent(out RaycastHit raycastHit))
+            {
+                clickTime = DateTime.UtcNow;
+                startClickPoint = raycastHit.point;
+                if (raycastHit.collider.tag == "Building")
+                {
+
+                    if (currentSelection != null)
+                    {
+                        if(currentSelection != raycastHit.collider.GetComponent<PlacableObject>())
+                        {
+                            currentSelection = null;
+                            clickOnABuilding = false;
+                            CancleSelectedPlacedBuilding();
+                        }
+                    }
+
+
+                    if (raycastHit.collider.GetComponent<PlacableObject>().Placed)
+                    {
+                        timeToSelectABuildingTimer = 0;
+                        clickOnABuilding = true;
+                        
+                        currentSelection = raycastHit.collider.GetComponent<PlacableObject>();
+                    }
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+        else
+        {
+            clickOnABuilding = false;
+            timeToSelectABuildingTimer = 0;
+
+            float diff = (float)DateTime.UtcNow.Subtract(clickTime).TotalSeconds;
+            if(diff < 0.1f && currentSelection != null)
+            {
+                CancleSelectedPlacedBuilding();
+                //if (GetMouseHitEvent(out RaycastHit raycastHit))
+                //{
+
+                //}
+            }
+
+            
         }
     }
+
+    private void SelectedPlacedBuidling()
+    {
+        if(currentSelection != null)
+        {
+            currentSelection.HighlightFloor(true);
+            FindAnyObjectByType<ConstructionUIHandler>().ToggleBuidingSelectView(true);
+        }
+    }
+
+
+    public void RemoveSelectedBuilding()
+    {
+        if(currentSelection != null)
+        {
+
+            for (int i = 0; i < currentSelection.buildingGridCells.Count; i++)
+            {
+                currentSelection.buildingGridCells[i].occupied = false;
+            }
+
+            createdBuidings.Remove(currentSelection);
+
+            Destroy(currentSelection.gameObject);
+            currentSelection = null;
+
+
+            FindAnyObjectByType<ConstructionUIHandler>().UpdateBuildingItemList(createdBuidings.Select(x => x.BuildingData.Name).ToArray());
+
+        }
+    }
+
+    private void CancleSelectedPlacedBuilding()
+    {
+        if (currentSelection != null)
+        {
+            currentSelection.HighlightFloor(false);
+            FindAnyObjectByType<ConstructionUIHandler>().ToggleBuidingSelectView(false);
+        }
+    }
+
 
     public void PlaceCurrentBuilding()
     {
@@ -47,15 +188,14 @@ public class BuildingSystem : MonoBehaviour
             return;
 
         placableObject.Place();
-        Vector3 start = SnapCoordinateToGrid(placableObject.GetTilePivotPosition());
 
-        TakeArea(start, placableObject.Size);
+        TakeArea(placableObject);
 
-
-        //CanBePlaced(placableObject);
         FindAnyObjectByType<ConstructionUIHandler>().Close();
 
-        
+        createdBuidings.Add(placableObject);
+
+        FindAnyObjectByType<ConstructionUIHandler>().UpdateBuildingItemList(createdBuidings.Select(x => x.BuildingData.Name).ToArray());
     }
 
     public void RotateCurrentBuilding()
@@ -177,18 +317,14 @@ public class BuildingSystem : MonoBehaviour
         return true;
     }
 
-    public void TakeArea(Vector3 start, Vector3Int size )
+    public void TakeArea(PlacableObject _placableObject )
     {
-
-        //tilemap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.y, start.y + size.y);
-        //Debug.Log(start + " " + size);
-
         
 
         BoundsInt area = new BoundsInt();
         
-        area.position = gridLayout.WorldToCell(placableObject.GetTilePivotPosition());
-        area.size = new Vector3Int(placableObject.Size.x, placableObject.Size.y, 1);
+        area.position = gridLayout.WorldToCell(_placableObject.GetTilePivotPosition());
+        area.size = new Vector3Int(_placableObject.Size.x, _placableObject.Size.y, 1);
         area.size = new Vector3Int(area.size.x + (int)(1f / 0.25f), area.size.y + (int)(1f / 0.25f), area.size.z);
 
         //Debug.Log(area.size);
@@ -198,15 +334,18 @@ public class BuildingSystem : MonoBehaviour
 
         for (int i = 0; i < points.Length; i++)
         {
-            GameObject gameObject = Instantiate(BuildingSystem.current.buildingFloor, placableObject.transform);// GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            GameObject gameObject = Instantiate(buildingFloor, _placableObject.transform);// GameObject.CreatePrimitive(PrimitiveType.Sphere);
             gameObject.transform.position = points[i] + Vector3.up * 0.002f;
             gameObject.transform.localScale = Vector3.one * 0.25f;
+
+            placableObject.buidlingFloors.Add(gameObject.GetComponent<GridCell>());
 
             Collider[] colliders = Physics.OverlapSphere(points[i], 0.1f, TileLayer);
             if(colliders.Length > 0)
             {
                 //GameObject tile = colliders[0].gameObject;
                 colliders[0].GetComponent<GridCell>().occupied = true;
+                placableObject.buildingGridCells.Add(colliders[0].GetComponent<GridCell>());
             }
         }
 

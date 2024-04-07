@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    private CameraControlActions cameraActions;
+    //private CameraControlActions cameraActions;
     private InputAction movement;
     private Transform cameraTransform;
 
@@ -46,9 +46,11 @@ public class CameraController : MonoBehaviour
     private Vector3 startDrag;
     private Vector3 zoomTarget;
 
+    private bool initialized;
+
     private void Awake()
     {
-        cameraActions = new CameraControlActions();
+        //cameraActions = new CameraControlActions();
         cameraTransform = this.GetComponentInChildren<Camera>().transform;
         zoomTarget = new Vector3(cameraTransform.localPosition.x, maxHeight, cameraTransform.localPosition.z);// + cameraTransform.forward;
     }
@@ -60,26 +62,35 @@ public class CameraController : MonoBehaviour
         //cameraTransform.LookAt(this.transform);
 
         lastPosition = this.transform.position;
-        movement = cameraActions.Camera.Movement;
+        Invoke(nameof(InitDelay), 0.2f);
+    }
 
-        cameraActions.Camera.Rotate.performed += RotateCamera;
-        cameraActions.Camera.Zoom.performed += OnMouseScroll;
-        cameraActions.Camera.Angle.performed += (x) => { angleChange = true; };
-        cameraActions.Camera.Angle.canceled += (x) => { angleChange = false; };
-        cameraActions.Camera.Enable();
+    private void InitDelay()
+    {
+        movement = GameManager.Instance.cameraActions.Camera.Movement;
+
+        GameManager.Instance.cameraActions.Camera.Rotate.performed += RotateCamera;
+        GameManager.Instance.cameraActions.Camera.Zoom.performed += OnMouseScroll;
+        GameManager.Instance.cameraActions.Camera.Angle.performed += (x) => { angleChange = true; };
+        GameManager.Instance.cameraActions.Camera.Angle.canceled += (x) => { angleChange = false; };
+        //GameManager.Instance.cameraActions.Camera.Enable();
+
+        initialized = true;
     }
 
     private void OnDisable()
     {
-        cameraActions.Camera.Rotate.performed -= RotateCamera;
-        cameraActions.Camera.Zoom.performed -= OnMouseScroll;
-        cameraActions.Camera.Angle.performed -= (x) => { angleChange = true; };
-        cameraActions.Camera.Angle.canceled -= (x) => { angleChange = false; };
-        cameraActions.Disable(); 
+        GameManager.Instance.cameraActions.Camera.Rotate.performed -= RotateCamera;
+        GameManager.Instance.cameraActions.Camera.Zoom.performed -= OnMouseScroll;
+        GameManager.Instance.cameraActions.Camera.Angle.performed -= (x) => { angleChange = true; };
+        GameManager.Instance.cameraActions.Camera.Angle.canceled -= (x) => { angleChange = false; };
+        //GameManager.Instance.cameraActions.Disable(); 
     }
 
     private void Update()
     {
+        if (initialized == false) return;
+
         GetKeyboardMovement();
 
         //if(useScreenEdge)

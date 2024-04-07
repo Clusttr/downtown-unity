@@ -11,6 +11,9 @@ public enum DummyUnitColor
 }
 public class GameManager : Singleton<GameManager>
 {
+
+    internal CameraControlActions cameraActions;
+
     //[Header("Art Stuff")]
     //[SerializeField] private Material tileMaterial;
     //[SerializeField] private float tileSize = 1.0f;
@@ -32,13 +35,33 @@ public class GameManager : Singleton<GameManager>
     //private Vector2Int currentHover;
     //private Vector3 bounds;
 
+    public override void Awake()
+    {
+        base.Awake();
+        cameraActions = new CameraControlActions();
+       
+    }
+
+    private void OnEnable()
+    {
+        cameraActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        cameraActions.Disable();
+    }
+
     private void Start()
     {
-       // GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y);
+
+        
+
+        // GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y);
 
         //buildings = new Buildings[TILE_COUNT_X, TILE_COUNT_Y];
 
-       // SpawnEnvironment();
+        // SpawnEnvironment();
         //PositionTheUnit();
 
 

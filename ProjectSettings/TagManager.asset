@@ -7,6 +7,7 @@ TagManager:
   - Grass
   - Road
   - Soil
+  - Building
   layers:
   - Default
   - TransparentFX
