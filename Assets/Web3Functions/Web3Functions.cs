@@ -3,6 +3,7 @@ using System.Text;
 using DowntownProgram;
 using DowntownProgram.Program;
 using Solana.Unity.Programs;
+using Solana.Unity.Programs.Abstract;
 using Solana.Unity.Rpc;
 using Solana.Unity.Wallet;
 using Unity.VisualScripting;
@@ -10,7 +11,7 @@ using UnityEngine;
 
 public class Web3Functions : Singleton<Web3Functions>
 {
-    
+
 
     private static readonly IRpcClient rpcClient = ClientFactory.GetClient(Cluster.DevNet);
     private static readonly IStreamingRpcClient streamingRpcClient = ClientFactory.GetStreamingClient(Cluster.DevNet);
@@ -26,11 +27,6 @@ public class Web3Functions : Singleton<Web3Functions>
         PublicKey town_address = ProgramHelper.GetTownAccount(out byte bump_town_address);
         PublicKey nft_vault = ProgramHelper.GetAssetVaultAccount(nft, out byte bump_nft_vault);
 
-        // Debug.Log("user_nft_ata: " + user_nft_ata);
-        // Debug.Log("town_address: " + town_address);
-        // Debug.Log("nft_vault: " + nft_vault);
-
-        // return "";
         var downtownClient = new DowntownProgramClient(rpcClient, streamingRpcClient, programId);
         var accounts = new InsertHouseAccounts
         {
@@ -38,7 +34,11 @@ public class Web3Functions : Singleton<Web3Functions>
             Town = town_address,
             NftMint = nft,
             UserNftAta = user_nft_ata,
-            NftVault = nft_vault
+            NftVault = nft_vault,
+            SystemProgram = SystemProgram.ProgramIdKey,
+            TokenProgram = TokenProgram.ProgramIdKey,
+            AssociatedTokenProgram = AssociatedTokenAccountProgram.ProgramIdKey
+
         };
         byte houseVariant = 1;
         var tx = downtownClient.SendInsertHouseAsync(accounts, houseVariant, 0, 0, 0, userAccount.PublicKey, signingCallback, programId).Result.Result;
