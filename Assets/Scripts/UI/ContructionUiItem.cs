@@ -66,7 +66,7 @@ public class BuildableUiItem : MonoBehaviour, IPointerDownHandler, IPointerMoveH
             pointerDown = false;
             DropBuiding();
             Debug.Log("Drag");
-            Web3Functions.Instance.InsertBuilding();
+            //Web3Functions.Instance.InsertBuilding();
         }
     }
 
